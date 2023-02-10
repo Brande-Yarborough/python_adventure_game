@@ -4,7 +4,7 @@ import conors_room
 import ambers_room
 import brandes_room
 
-amber = ambers_room.Amber.check_out()
+amber_riddle = ambers_room.Amber.check_out()
 
 conor_object = conors_room.ConorRoom.check_out()
 
