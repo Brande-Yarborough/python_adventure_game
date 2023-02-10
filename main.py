@@ -34,6 +34,11 @@ class Main:
             print('The groundhog and Mad Hatter are sad you did not join them :')
 
 
+game = Main()
+
+game.main_play()
+
+
 #
 # else:
 # print('The groundhog and Mad Hatter are sad you did not join them :( ')
