@@ -4,9 +4,6 @@ import conors_room
 import ambers_room
 import brandes_room
 
-amber_riddle = ambers_room.Amber.check_out()
-
-conor_object = conors_room.ConorRoom.check_out()
 
 
 class Main:
@@ -24,8 +21,8 @@ class Main:
             'Would you like to follow the witty albino groundhog with an Apple watch down the rabbit hole into Wonderland? Yes or No:\n').lower()
         if start == 'yes':
             print("Here we go! Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!\n")
-            players_choice = input(
-                'which adventure would you like to start with?').lower()
+            players_choice = int(input(
+                'which adventure would you like to start with?\n').lower())
 
 
             if players_choice == 1:
@@ -40,9 +37,9 @@ class Main:
                 pass            
             
             else:
-                print("I get that you think you're a special snowflake, but imma really need for you to stick with that status quo here.")
+                print("I get that you think you're a special snowflake, but imma really need for you to stick with that status quo here.\n")
         else:
-            print('The groundhog and Mad Hatter are sad you did not join them :')
+            print('The groundhog and Mad Hatter are sad you did not join them :\n')
 
 
 # This initializes the key to a value of zero.
