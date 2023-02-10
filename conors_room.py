@@ -1,5 +1,6 @@
-class ConorRoom(Object):
-    def __init__(self):
+class ConorRoom:
+    def __init__(self, key):
+        self.key = key
         self.health = 100
         self.riddle_correct = False
 
@@ -8,3 +9,7 @@ class ConorRoom(Object):
 
     def entrance(self):
         print("welcome to the beach \n the ocean is a powerful and mysterious creature")
+
+    def play(self):
+        self.key += 1
+        print(self.key)

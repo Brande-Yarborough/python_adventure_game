@@ -1,9 +1,20 @@
 import string
 import josiahs_room
+import conors_room
+import ambers_room
+import brandes_room
 
-amber = ambers_room.Amber()
+# amber = ambers_room.Amber()
+
+# conor_object = conors_room.ConorRoom.check_out()
 
 
+class Main:
+    def __init__(self, key):
+        self.key = key
+
+    def main_play(self):
+        conors_room.ConorRoom(self.key).play()
 
 
 # items = 0
@@ -29,7 +40,6 @@ amber = ambers_room.Amber()
 # input(f'Your choices are{options}')
 
 # print(f'Hello, {name}! Welcome to your adventure!')
-
 
 # put story about following groundhog here?
 start = input(
@@ -76,4 +86,3 @@ else:
 # print(f'Hello, {name}! Welcome to your adventure!')
 
 # put story about following groundhog here?
-    
