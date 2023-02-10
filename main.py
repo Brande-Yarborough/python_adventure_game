@@ -27,7 +27,7 @@ class Main:
         if start == 'yes':
             print("Here we go! Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!\n")
             players_choice = input(
-                'which adventure would you like to start with?').lower()
+                'which adventure would you like to start with: Room 1, 2, 3 or 4? ').lower()
 
             if players_choice == 1:
                 print("you have chose to the journey to the kingdom of hearts")
