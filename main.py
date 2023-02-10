@@ -42,7 +42,7 @@ class Main:
                 self.computer_room()
 
             else:
-                print("I get that you think you're a special snowflake, but imma really need for you to stick with that status quo here.\n")
+                print("Whats the matter, are you mad as a hatter. If you wish to have tea, pick a number to proceed. Preferably 1 through 4\n")
         else:
             print('The groundhog and Mad Hatter are sad you did not join them :\n')
 
