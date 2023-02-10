@@ -4,10 +4,6 @@ import conors_room
 import ambers_room
 import brandes_room
 
-amber = ambers_room.Amber()
-
-conor_object = conors_room.ConorRoom.check_out()
-
 
 class Main:
     def __init__(self, key):
