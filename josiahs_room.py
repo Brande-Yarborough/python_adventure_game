@@ -1,1 +1,9 @@
-print('josiah')
+import main
+
+
+class Josiah(Room):
+    
+    pass
+
+
+
