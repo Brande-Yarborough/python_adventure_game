@@ -4,6 +4,8 @@ amber = ambers_room.Amber()
 
 amber.check_out()
 
+import string
+
 name = input('Enter your name: ')
 print(f'Hello, {name}! Welcome to your adventure!')
 
@@ -14,3 +16,5 @@ if start == 'Yes'.lower:
     print("Here we go! Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!")
 else:
     print('The groundhog and Mad Hatter are sad you did not join them :( ')
+
+    
