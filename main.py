@@ -16,18 +16,29 @@ class Main:
     def main_play(self):
         conors_room.ConorRoom(self.key).play()
 
+    def mirror_room(self):
+        josiahs_room.Mirror_Room(self.key).play()
+
     def start_adventure(self):
         start = input(
-            'Would you like to follow the witty albino groundhog with an Apple watch down the rabbit hole into Wonderland? Yes or No: ')
-        if start == 'Yes'.lower:
-            print("Here we go! Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!")
+            'Would you like to follow the witty albino groundhog with an Apple watch down the rabbit hole into Wonderland? Yes or No:\n').lower()
+        if start == 'yes':
+            print("Here we go! Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!\n")
             players_choice = input(
-                'which adventure would you like to start with?')
+                'which adventure would you like to start with?').lower()
+
 
             if players_choice == 1:
                 print("you have chose to the journey to the kingdom of hearts")
             elif players_choice == 2:
-                pass
+                self.main_play()
+
+            elif players_choice == 3:
+                self.mirror_room()
+
+            elif players_choice == 4:
+                pass            
+            
             else:
                 print("I get that you think you're a special snowflake, but imma really need for you to stick with that status quo here.")
         else:

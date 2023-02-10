@@ -1,7 +1,6 @@
 class ConorRoom:
     def __init__(self, key):
         self.key = key
-        self.health = 100
         self.riddle_correct = False
 
     def check_out(self):
