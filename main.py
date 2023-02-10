@@ -4,9 +4,9 @@ import conors_room
 import ambers_room
 import brandes_room
 
-# amber = ambers_room.Amber()
+amber = ambers_room.Amber()
 
-# conor_object = conors_room.ConorRoom.check_out()
+conor_object = conors_room.ConorRoom.check_out()
 
 
 class Main:
@@ -34,9 +34,10 @@ class Main:
             print('The groundhog and Mad Hatter are sad you did not join them :')
 
 
-game = Main()
+# This initializes the key to a value of zero.
+game = Main(0)
 
-game.main_play()
+game.start_adventure()
 
 
 #
