@@ -1,4 +1,3 @@
-import ambers_room
 
 amber = ambers_room.Amber()
 
@@ -28,4 +27,30 @@ if start == 'Yes'.lower:
 else:
     print('The groundhog and Mad Hatter are sad you did not join them :( ')
 
+
+# items = 0
+# class Room():
+#     def __init__(self):
+#         pass
+#     def item_received():
+#         items += 1
+
+#     def to_start():
+#         first_room()
+
+# name = input('Enter your name: ')
+
+# class Main(Room):
+#     __init__(self)
+#     options = [1, 2, 3, 4]
+
+#     pass
+
+# main = Main()
+
+# input(f'Your choices are{options}')
+
+# print(f'Hello, {name}! Welcome to your adventure!')
+
+# put story about following groundhog here?
     
