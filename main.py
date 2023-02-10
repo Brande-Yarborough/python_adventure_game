@@ -18,6 +18,9 @@ class Main:
     def mirror_room(self):
         josiahs_room.Mirror_Room(self.key).play()
 
+    def computer_room(self):
+        brandes_room.BrandeRoom(self.key).play()
+
     def start_adventure(self):
         start = input(
             'Would you like to follow the witty albino groundhog with an Apple watch down the rabbit hole into Wonderland? Yes or No:\n').lower()
@@ -36,7 +39,7 @@ class Main:
                 self.mirror_room()
 
             elif players_choice == 4:
-                pass
+                self.computer_room()
 
             else:
                 print("I get that you think you're a special snowflake, but imma really need for you to stick with that status quo here.\n")
