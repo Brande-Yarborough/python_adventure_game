@@ -1,3 +1,9 @@
+import ambers_room
+
+amber = ambers_room.Amber()
+
+amber.check_out()
+
 name = input('Enter your name: ')
 print(f'Hello, {name}! Welcome to your adventure!')
 
