@@ -9,6 +9,9 @@ class Main:
     def __init__(self, key):
         self.key = key
 
+    def heartkingdom_room(self):
+        ambers_room.Hearts_Room(self.key).play()
+
     def main_play(self):
         conors_room.ConorRoom(self.key).play()
 
@@ -20,11 +23,12 @@ class Main:
             'Would you like to follow the witty albino groundhog with an Apple watch down the rabbit hole into Wonderland? Yes or No:\n').lower()
         if start == 'yes':
             print("Here we go! Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!\n")
-            players_choice = input(
-                'which adventure would you like to start with?').lower()
+            players_choice = int(input(
+                'which adventure would you like to start with?\n').lower())
 
             if players_choice == 1:
                 print("you have chose to the journey to the kingdom of hearts")
+                self.heartkingdom_room()
             elif players_choice == 2:
                 self.main_play()
 
