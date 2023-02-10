@@ -23,8 +23,8 @@ class Main:
             'Would you like to follow the witty albino groundhog with an Apple watch down the rabbit hole into Wonderland? Yes or No:\n').lower()
         if start == 'yes':
             print("Here we go! Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!\n")
-            players_choice = int(input(
-                'which adventure would you like to start with?\n').lower())
+            players_choice = input(
+                'which adventure would you like to start with?').lower()
 
             if players_choice == 1:
                 print("you have chose to the journey to the kingdom of hearts")
