@@ -27,7 +27,7 @@ class BrandeRoom:
  `""""""""""""""""`    '========'
 """)
         time.sleep(2)
-        print("As you enter, you see glowing screens with people seated, typing away, and meet your guide, \n Mady Hatter.")
+        print("As you follow the groundhog inside, you see glowing screens with people seated, typing away, and meet your guide, \n Mady Hatter.")
         time.sleep(2)
         print("Mady Hatter tells you that you have two choices, follow her into the cave and help solve a riddle to \n obtain a key or leave. ")
         time.sleep(2)
@@ -96,5 +96,5 @@ class BrandeRoom:
         elif response != "keyboard":
             print("Stumped you. Adventure over.")
             # Do we quit or go back to main here??
-            self.key += 1
-            print(self.key)
+            # self.key += 1
+            # print(self.key)
