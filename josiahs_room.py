@@ -1,46 +1,54 @@
 import random
 import string
 import time
-import PIL.Image
+
 
 class Mirror_Room:
 
     GROUNDHOG_NAMES = ('marmots','otchek', 'minibeast', 'vermin', 'woodchuck', 'whistlepig', 'moonack', 'land-beaver', 'gnawer', 'nudnick', 'groundpig', 'woonusk', 'siffleux')
-    GROUNDHOG_APPEARANCE = ('waxen', 'albino', 'alabastrine', 'cadaverous', 'peaked', 'wheyfaced', 'lurid')
+    GROUNDHOG_APPEARANCE = ('waxen', 'albino', 'porcelain', 'cadaverous', 'peaked', 'wheyface', 'lurid')
     GROUNDHOG_DISPOSITION = ('idiosyncratic', 'vainglorious', 'chimerical', 'phantasmic', 'quixotic', )
 
     def __init__(self, key):
         self.key = key
-        self.riddle_correct = False
-
-    def check_out(self):
-        print("Hello traveler!")
-
-    def entrance(self):
-        print("welcome to the beach \n the ocean is a powerful and mysterious creature")
-
-    def play(self):
-        self.key += 1
-        print(self.key)
+        self.enter()
+        
+        
 
     def enter(self):
-        entrance_text = print("""
+        print(f'You currently have {self.key} out of 4 keys')
+        print("""
         \nYour eyes open and you find yourself in a dark room\n\n
         No, room isn't quite the right word.-PAUSE-\n
         Formless void? Yes! A perfectly apt description, a formless void.\n
         Curiously, your apocryphal alabastrine escort seems to be missing.""")
         
-        input('\nWill you...\n1: Look Around,\n2: Call out\n>')
+        input('\nWill you...\n1: Look Around, or\n2: Call out\n>')
 
     def look_around(self):
-        pass
+        self.choose_mirror()
 
     def call_out(self):
         print("You attempt to speak ")
+        self.choose_mirror()
 
+    def choose_mirror(self):
+        print("""\n
+        Three more mirrors appear before you. When you step in front of each one however, your reflection is different.\n
+        They're all still you but in the one to the left you stand tall and valiant.\nIn the middle mirror you seem wise and assured.\nTo the right, you appear curious and inquisitive.
+        """)
+        mirror_choice = input("Which will you choose?\n(1) You feel courageous.\n(2) You're feeling wise\n(3)")
+        if mirror_choice == '1':
+            self.courage()
+        elif mirror_choice == '2':
+            self.wisdom()
+        elif mirror_choice == '3':
+            self.curiosity()
+        else:
+            print("Invalid")
     def courage(self):
         #Scary maze where
-        pass
+        self.courage_ending()
 
     def courage_ending(self):
         print("""\nYou walk forward, unperturbed. Holding on tightly to the mental image of yourself in the mirror, stance powerful fills you with courage.\n
@@ -55,17 +63,34 @@ class Mirror_Room:
         You take inventory of the room you're in now. It's like a plain box, the walls white and marble-like. You look up and cen't see the top, but there's light trickling in from somewhere and shining down to the center of the room.\n
         Bathing in that light is a stone pedestal of a python. Its hood is spread and it looks poised for a strike. In its mouth, you see a crimson crystalline apple.
         """)
+        self.room_end()
 
     def wisdom(self):
-        #Holds the puzzle/riddle
-        pass
+        riddle = print('"I am one and part of a pair. My front and back are mirrors. If you remove them I have to question why. The path through can only be taken without me."')
+        player_answer = input("Type in your guess here:\n> ").lower()
+        correct_answer = ['eye', 'eyes']
+        riddle_turns = 0
+
+        while riddle_turns < 3:
+            if player_answer in correct_answer:
+                print("Correct!")
+                self.riddle_solved()
+            else:
+                print("Incorrect")
+                riddle_turns += 1
+        
+        self.wisdom_ending()
+
+    def riddle_solved(self):
+        self.room_end()
+        
 
     def wisdom_ending(self):
-        pass
+        self.room_end()
 
     def curiosity(self):
         #Whimsical side-quest where curiosity is rewarded
-        pass
+        self.curiosity_ending
 
     def curiosity_ending(self):
         self.room_end()

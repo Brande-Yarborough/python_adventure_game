@@ -16,18 +16,18 @@ class Main:
         conors_room.ConorRoom(self.key).play()
 
     def mirror_room(self):
-        josiahs_room.Mirror_Room(self.key).play()
+        josiahs_room.Mirror_Room(self.key).enter()
 
     def computer_room(self):
         brandes_room.BrandeRoom(self.key).play()
 
     def start_adventure(self):
         start = input(
-            'La la la la...oh! I didn\'t see you there...I was just washing my majestic white fur.\n\n You wouldn\'t be interested in following a beautiful rodent into a hole would you?\n I am about to meander down...I got a notification that it was going to rain on my Apple Watch. Would you be interested in coming with me to Wonderland?\nYes or No: ')
+            'La la la la...oh! I didn\'t see you there...I was just washing my majestic white fur.\n\nYou wouldn\'t be interested in following a beautiful rodent into a hole would you?\nI am about to meander down...I got a notification that it was going to rain on my Apple Watch. Would you be interested in coming with me to Wonderland?\nYes or No:\n>')
         if start.lower() == 'yes' or start.lower() == 'y' or start == '1':
             print("\nOh delightful. We barely fit...Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!\n")
             players_choice = input(
-                'which adventure would you like to start with: Room 1, (2) a seafaring journey , 3 or 4?\n>').lower()
+                'Which adventure would you like to start with:\n(1) Room 1,\n(2) a seafaring journey,\n(3) the Mysterious Mirror, or\n(4)?\n>').lower()
 
             if players_choice == '1':
                 print("You have chosen a journey to the kingdom of hearts. With the help of you Grounhog friend you must evade the queens wrath. Be wary of her tarts of you shall pain the roses red, and possible lose your head.")
@@ -36,7 +36,7 @@ class Main:
                 self.main_play()
 
             elif players_choice == '3':
-                print("\nMirror appears before you and you approach it. You reach out to touch it and when your hand touches the one of your reflection, fall through the veneer.")
+                print("\nA mirror appears before you and you approach it. You reach out to touch it and when your hand touches the one of your reflection, fall through the veneer.")
                 self.mirror_room()
 
             elif players_choice == '4':
