@@ -6,7 +6,6 @@ import string
 class ConorRoom:
     def __init__(self, key):
         self.key = key
-        self.riddle_correct = False
 
     def check_out(self):
         print("Hello traveler!")
@@ -16,7 +15,7 @@ class ConorRoom:
 
     def play(self):
         # This is the first function called.
-        self.key += 1
+        update_value = self.key  # This sets it to the initilization value.
         print(self.key)
         for each in range(0, 5):
             print(r"""
@@ -59,12 +58,14 @@ class ConorRoom:
  V""")
         answer1 = input('Oh my......It looks like I have gotten myself\n                                                  ...into quite a bit of trouble...\n\nI don''t look anything like a groundhog anymore...and where is my watch??\n\n do you want to (1) dive deeper or (2) come up for air?')
         if answer1 == '1':
-            self.sinking_down()
+            update_value = self.sinking_down()
             print('Hmmm....that is a brave choice.')
         if answer1 == '2':
             print(
                 'I do believe my flippers are a flailing....WE\'RE SINKING WE\'RE SINKING')
-            self.sinking_down()
+            update_value = self.sinking_down()
+        print(update_value)
+        return update_value
 
     def sinking_down(self):
         os.system('clear')
@@ -122,13 +123,13 @@ i#######mmb.    ,dnnnnnnnnnnnnvnb.    ,dv%v%%%%%%;..:::::%:%%'
             time.sleep(1)
             print('          ....good heavens! We are VERY late! \n\n            I will barely have time to recite my lengthy poem!...')
             time.sleep(2)
-            self.ask_the_riddle()
+            return self.ask_the_riddle()
         else:
             print('This is a lousy way to repay our friendship...well I guess we\'ll never figure out what time it is...')
             time.sleep(1)
             print(
                 '\n....since we aren\'t on a schedule, we have time to read my lengthy poem!')
-            self.ask_the_riddle()
+            return self.ask_the_riddle()
 
     def ask_the_riddle(self):
         print(r"""
@@ -187,14 +188,20 @@ ___        _ --__ -                 /'         :`--.______,-::  /
         """)
         riddle_answer = input('Answer carefully: ').lower()
         if riddle_answer == 'morse code':
-            self.key += 1
+            result = self.key + 1
+            print(result)
             print('Absolutely brilliant! Now, WAKE UP')
+            update_value = result
+            return update_value
         else:
             for each in range(0, 2):
                 riddle_try = input(
                     'Those bones are starting to rot...! Guess again:')
                 if riddle_try == 'morse code':
-                    self.key += 1
+                    result = self.key + 1
                     print('Absolutely brilliant! Now, WAKE UP')
+                    update_value = result
+                    return update_value
+
             print('OOps! Hope it wasn\'t a technical snafu...you got it wrong.')
             time.sleep(2)

@@ -14,7 +14,8 @@ class Main:
         ambers_room.Hearts_Room(self.key).play()
 
     def main_play(self):
-        conors_room.ConorRoom(self.key).play()
+        result = conors_room.ConorRoom(self.key).play()
+        self.key = result
 
     def mirror_room(self):
         josiahs_room.Mirror_Room(self.key).enter()
@@ -177,14 +178,16 @@ jgs      ~"` ~"~~`
 
 
 # This initializes the key to a value of zero.
+
 game = Main(0)
 
 game.start_adventure()
 
 
 while game.key < 4:
-    print(game.key)
+    print(f'Current keys = {game.key}')
     game.next_sequence()
+
 if game.key == 4:
     # call final room here
     game.finalroom()
