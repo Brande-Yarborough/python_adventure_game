@@ -15,8 +15,7 @@ class ConorRoom:
 
     def play(self):
         # This is the first function called.
-        update_value = self.key  # This sets it to the initilization value.
-        print(self.key)
+        update_value = self.key  # This sets it to the initialization value.
         for each in range(0, 5):
             print(r"""
                    /\                       /\                        /\                       /\
@@ -64,7 +63,6 @@ class ConorRoom:
             print(
                 'I do believe my flippers are a flailing....WE\'RE SINKING WE\'RE SINKING')
             update_value = self.sinking_down()
-        print(update_value)
         return update_value
 
     def sinking_down(self):
@@ -204,5 +202,5 @@ ___        _ --__ -                 /'         :`--.______,-::  /
                     return update_value
 
             print('OOps! Hope it wasn\'t a technical snafu...you got it wrong.')
+            time.sleep(1)
             return self.key
-            time.sleep(2)
