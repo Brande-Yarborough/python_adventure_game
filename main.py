@@ -184,6 +184,7 @@ game.start_adventure()
 
 
 while game.key < 4:
+    print(game.key)
     game.next_sequence()
 if game.key == 4:
     # call final room here
