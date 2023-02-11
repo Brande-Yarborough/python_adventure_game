@@ -1,5 +1,6 @@
 import time
 import os
+import string
 
 
 class ConorRoom:
@@ -56,7 +57,7 @@ class ConorRoom:
   888P
  88P
  V""")
-        answer1 = input('Oh my......It looks like I have gotten myself\n                                         into quite a bit of trouble...\n\nI don''t look anything like a groundhog anymore...and where is my watch??\n do you want to (1) dive deeper or (2) come up for air?')
+        answer1 = input('Oh my......It looks like I have gotten myself\n                                                    into quite a bit of trouble...\n\nI don''t look anything like a groundhog anymore...and where is my watch??\n do you want to (1) dive deeper or (2) come up for air?')
         if answer1 == '1':
             print('Hmmm....what a devastating choice.')
             self.sinking_down()
@@ -97,43 +98,54 @@ i#######mmb.    ,dnnnnnnnnnnnnvnb.    ,dv%v%%%%%%;..:::::%:%%'
         print("Oh! I see my watch! It's wayyyyyyyy down there...under that ugly fish fellow...")
         answer2 = input(
             'Will you go grab it for me? (1) Of course! I would love to help or (2) Absolutely not...get me back to the surface!')
-        if answer2 == 1:
-            print('Thanks!')
+        if answer2 == '1':
+            print('Why thank you! Now that I can finally tell the time\n\n          ....good heavens! We are very late! \n\n            I barely have time to recite my poem!...')
+            time.sleep(0.5)
+            self.ask_the_riddle()
         else:
-            print('This is a lousy way to repay our friendship...')
+            print('This is a lousy way to repay our friendship...well I guess we''ll never figure out what time it is\n....since we aren''t on a schedule, we have time to read my poem!')
+            self.ask_the_riddle()
 
     def ask_the_riddle(self):
         # This is the first function called
         print(r"""
+
+
         I once lived on the shore, amongst the trees so green
-        With my friends Walrus and the Carpenter, in a place so serene
-        We’d bask in the sun, the warmth of the day
+        With my friends Walrus and Carpenter, in a place so serene
+        We'd bask in the sun, the warmth of the day
         And talk about life, in our own special way
 
         I recall the days, when I was so fair
         An albino groundhog, with shocking white hair
-        But now I’m a creature of the deep blue sea
-	I swim and play among the fields of seaweed
+        But now I'm a creature of the deep blue sea
+        I swim and play among fields of seaweed
 
-	I miss my friends, and the life that I knew
-	The walrus and carpenter were my friends that were true
-        But the sea is my home, now with a beautiful view //fix
-
-	In my dreams, I visit the shore once more
-	I still see the Walrus, rolling in sand
-	And the Carpenter, with his great chiseled hand
-	And we laugh and we dance, just like we did before
-
-	But now I must wake, and return to the sea
-	So if you please answer a single riddle for me: 
-
-	I tap when I talk, in a strange sort of way
-	And my name is another for a friend I have made
-
-	Full answers only! No more and no less
-	Punctation correct and all that mess
-	If you answer wrong I will keep you here
-	Until you rot in the ocean and your bones disappear
+        I miss my friends, and the life that I knew
+        The walrus and carpenter were my friends that were true
+        But the sea is my home, now with a beautiful view
+        
+        In my dreams, I visit the shore once more
+        I still see the Walrus, rolling in sand
+        And the Carpenter, with his great chiseled hand
+        And we laugh and we dance, just like we did before
+        
+        But now I must wake, and return to the sea
+        So if you please answer a riddle for me: 
+        
+        I tap when I talk, in a strange sort of way
+        And my name is another for a friend I have made
+        
+        Full answers only! No more and no less
+        Punctation correct and all of that mess
+        If you answer wrong I will keep you here
+        Until you rot in the ocean and your bones disappear...
         
         
         """)
+        riddle_answer = input('Answer carefully: ').lower()
+        if riddle_answer == 'morse code':
+            self.key += 1
+            print('Absolutely brilliant!')
+        else:
+            print('OOps! Hope it wasn''t a technical snafu...you got it wrong.')

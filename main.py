@@ -23,14 +23,14 @@ class Main:
 
     def start_adventure(self):
         start = input(
-            'Would you like to follow the witty albino groundhog with an Apple watch down the rabbit hole into Wonderland? Yes or No:\n').lower()
-        if start == 'yes':
-            print("Here we go! Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!\n")
+            'La la la la...oh! I didn''t see you there...I was just washing my majestic white fur.\n\n You wouldn''t be interested in following a beautiful rodent into a hole would you?\n I am about to meander down into this tunnel ...I just got a notification that it was going to rain. Would you be interested in coming with me to Wonderland? \nYes or No: ')
+        if start.lower() == 'yes' or start.lower() == 'y' or start == '1':
+            print("\nOh delightful. We barely fit...Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!\n")
             players_choice = input(
-                'which adventure would you like to start with: Room 1, 2, 3 or 4? ').lower()
+                'which adventure would you like to start with: Room 1, (2) a seafaring journey , 3 or 4? ').lower()
 
             if players_choice == '1':
-                print("you have chose to the journey to the kingdom of hearts")
+                print("you have chose to journey to the kingdom of hearts")
                 self.heartkingdom_room()
             elif players_choice == '2':
                 self.main_play()
@@ -42,7 +42,7 @@ class Main:
                 self.computer_room()
 
             else:
-                print("Whats the matter, are you mad as a hatter. If you wish to have tea, pick a number to proceed. Preferably 1 through 4\n")
+                print("Whats the matter, are you mad as a hatter. If you wish to have tea, pick a number to proceed. Preferably 1 through 4...\n")
         else:
             print('The groundhog and Mad Hatter are sad you did not join them :\n')
 
@@ -52,7 +52,7 @@ game = Main(0)
 
 game.start_adventure()
 
-print("----------------GAME OVER----------------")
+print("\n\n\n----------------GAME OVER----------------")
 
 
 #
