@@ -165,9 +165,9 @@ ___        _ --__ -                 /'         :`--.______,-::  /
 
         I miss my friends, and the life that I knew
         The walrus and carpenter were my friends that were true
-        But the sea is my home, now with a beautiful view
+        Now the sea is my home, with an aqua-green view
         
-        In my dreams, I visit the shore once more
+        In my dreams, I visit the shore
         I still see the Walrus, rolling in sand
         And the Carpenter, with his great chiseled hand
         And we laugh and we dance, just like we did before
@@ -191,5 +191,10 @@ ___        _ --__ -                 /'         :`--.______,-::  /
             print('Absolutely brilliant! Now, WAKE UP')
         else:
             for each in range(0, 2):
-                print('We will get a few more tries!')
+                riddle_try = input(
+                    'Those bones are starting to rot...! Guess again:')
+                if riddle_try == 'morse code':
+                    self.key += 1
+                    print('Absolutely brilliant! Now, WAKE UP')
             print('OOps! Hope it wasn\'t a technical snafu...you got it wrong.')
+            time.sleep(2)

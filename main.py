@@ -55,7 +55,7 @@ class Main:
         # print(wow that was weird! Thank goodness you're still here. I am going to keep wandering around.
         # Let's check out another room!
         players_choice = input(
-            'Wow that was weird! Thank goodness you\'re still here.\n\n I am going to keep wandering around.\n\n Feel free to pick another room...')
+            'Wow that was weird! Thank goodness you\'re still here.\n\n I am going to keep wandering around.\n\n Feel free to pick another room...\n(1) The Kingdom of Hearts,\n(2) A Seafaring Journey,\n(3) The Mysterious Mirror, or\n(4) The Cave of Computers?\n>')
 
         if players_choice == '1':
             print("You have chosen a journey to the kingdom of hearts. With the help of you Grounhog friend you must evade the queens wrath. Be wary of her tarts of you shall pain the roses red, and possible lose your head.")
@@ -78,7 +78,7 @@ game.start_adventure()
 
 
 while game.key < 4:
-    game.repeat_adventure()
+    game.next_sequence()
 
 print("\n\n\n----------------GAME OVER----------------")
 
