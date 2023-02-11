@@ -94,6 +94,25 @@ i#######mmb.    ,dnnnnnnnnnnnnvnb.    ,dv%v%%%%%%;..:::::%:%%'
       `Y@@#m##mmmmnmnnnnnnnnnvnvvvvv%v%%%%%"'
          `""Y8@@@nmnnnnnnnnnvnvvvv%%%%""'
                  '''''""""""'''''
+                 
+                 
+                 
+                 
+                                        _*_
+                     ,;-^-:.
+ .------------------'` \   `'-----------.---.
+|  o  o  o          ((  ))           |-  |
+ `------------------..     ',-----------'---'
+                     `:._.;'         
+                       `*'
+                 
+                 
+                 
+                 
+
+                 
+                 
+                 
                  """)
         print("Oh wait! I see my watch! It\'s wayyyyyyyy down there...under that ugly fish fellow...")
         answer2 = input(

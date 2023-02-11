@@ -1,5 +1,5 @@
 import string
-import josiahs_room
+# import josiahs_room
 import conors_room
 import ambers_room
 import brandes_room
@@ -47,11 +47,17 @@ class Main:
         else:
             print('The groundhog and Mad Hatter are sad you did not join them :\n')
 
+    def repeat_adventure(self):
+        pass
+
 
 # This initializes the key to a value of zero.
 game = Main(0)
 
 game.start_adventure()
+
+if game.key < 4:
+    game.repeat_adventure()
 
 print("\n\n\n----------------GAME OVER----------------")
 
