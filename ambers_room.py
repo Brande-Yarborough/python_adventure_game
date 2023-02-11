@@ -1,4 +1,8 @@
+import random
+
+
 class Hearts_Room:
+
     def __init__(self, key,):
         self.key = key
 
@@ -15,7 +19,9 @@ class Hearts_Room:
 
     def queens_riddle(self):
 
-        word = ['watermelon']
+        print("While following your groundhog friend,you have stumbled into the kingdom of hearts. The queen is convinced you have stolen her tarts. If you wish to be free, and avoid her majesty.You must answer this rhyme, but make haste, make haste! three guesses seal you fate.")
+        word_to_guess = ["watermelon"]
+        word = random.choice(word_to_guess)
 
         word_display = '_' * len(word)
         guessed = False
@@ -50,17 +56,16 @@ class Hearts_Room:
                     if "_" not in word_display:
                         guessed = True
 
-                    elif len(guess) == len(word) and guess.isalpha():
-                        if guess in guessed_words:
-                            print(
-                                "Please try again, I dont want to paint the roses red", guess)
-                    elif guess != word:
-                        print(guess, "Perhaps it is a fruit of sorts")
-                        tries -= 1
-                        guessed_words.append(guess)
-                    else:
-                        guessed = True
-                        word_display = word
+            elif len(guess) == len(word) and guess.isalpha():
+                if guess in guessed_words:
+                    print("Please try again, I dont want to paint the roses red", guess)
+                elif guess != word:
+                    print(guess, "Perhaps it is a fruit of sorts")
+                    tries -= 1
+                    guessed_words.append(guess)
+                else:
+                    guessed = True
+                    word_display = word
 
             else:
                 print("Youre time is running short dear friend")
@@ -74,3 +79,4 @@ class Hearts_Room:
 
             if tries == 0:
                 print("I do hope the tart was worth it.", word)
+                break
