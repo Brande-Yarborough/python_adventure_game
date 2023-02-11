@@ -152,7 +152,7 @@ jgs      ~"` ~"~~`
                 self.computer_room()
 
             else:
-                print("Whats the matter, are you mad as a hatter. If you wish to have tea, pick a number to proceed. Preferably 1 through 4...\n")
+                print("What\'s the matter, are you mad as a hatter. If you wish to have tea, pick a number to proceed. Preferably 1 through 4...\n")
         else:
             print('The groundhog and Mad Hatter are sad you did not join them :\n')
 
@@ -164,7 +164,7 @@ jgs      ~"` ~"~~`
             'Wow that was weird! Thank goodness you\'re still here.\n\n I am going to keep wandering around.\n\n Feel free to pick another room...\n(1) The Kingdom of Hearts,\n(2) A Seafaring Journey,\n(3) The Mysterious Mirror, or\n(4) The Cave of Computers?\n>')
 
         if players_choice == '1':
-            print("You have chosen a journey to the kingdom of hearts. With the help of you Grounhog friend you must evade the queens wrath. Be wary of her tarts of you shall pain the roses red, and possible lose your head.")
+            print("You have chosen a journey to the kingdom of hearts. With the help of your Grounhog friend you must evade the queens wrath. Be wary of her tarts of you shall pain the roses red, and possible lose your head.")
             self.heartkingdom_room()
         elif players_choice == '2':
             self.main_play()

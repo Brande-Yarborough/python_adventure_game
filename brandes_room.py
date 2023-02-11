@@ -36,16 +36,40 @@ class BrandeRoom:
         if choice == "stay":
             print("This journey will be unforgettable! Good choice!")
             time.sleep(3)
-            # How do I move from here to the cave if choice is stay??
+            # call self.cave to move from here to the cave if choice is stay
             self.cave()
         elif choice == "leave":
             print(
                 "You thought you were leaving, but get stuck in an infinite loop of nonsense. Adventure over.")
             # Do we quit adventure here or send back to start of main??
-            # else: ?? do we need an else statement here for incorrect input?
 
     def cave(self):
         print("Mady Hatter says we are all mad here, mad about code.")
+        print(r"""
+        
+                                ,.--""-._
+                            __/         `.
+ | Adventures in |     _,**"   "*-.       `.
+ |  Wonderland   |   ,'            `.       \
+ `---------------'  ;    _,.---._    \  ,'\  \
+                   :   ,'   ,-.. `.   \'   \ :
+                   |  ;_\  (___)`  `-..__  : |
+                   ;-'`*'"  `*'    `--._ ` | ;
+                  /,-'/  -.        `---.`  |"
+                  /_,'`--='.       `-.._,-" _
+                   (/\\,--. \    ___-.`:   //___
+                      /\'''\ '  |   |-`|  ( -__,'
+                     '. `--'    ;   ;  ; ;/_/
+                       `. `.__,/   /_,' /`.~;
+                       _.-._|_/_,'.____/   /
+                  ..--" /  =/  \=  \      /
+                 /  ;._.\_.-`--'-._/ ____/
+                 \ /   /._/|.\     ."
+                  `*--'._ "-.:     :
+                       :/".A` \    |
+                       |   |.  `.  :
+                       ;   |.    `. 
+                       """)
         time.sleep(2)
         print("Now that you are here, you must also finish your pixel perfect project in addition to solving \n the riddle.")
         time.sleep(2)
@@ -61,7 +85,7 @@ class BrandeRoom:
             "Are you up for the challenge? Enter Yes or No: ").lower()
         if response == "yes":
             print("Riddle me this...")
-            # How do I move on to the riddle or play part? call it here?
+            # call self.play here to move on to riddle
             self.play()
         elif response == "no":
             print(
@@ -69,7 +93,6 @@ class BrandeRoom:
             print(
                 "It appears the computer has a virus, or a terminal illness-did you catch that knee slapping joke? Adventure over.")
             # Do we quit here or send back to main to start over??
-            # else? do we need an else statement here for incorrect input?
 
     def play(self):
         print("Solve this riddle to move on and make your way to the tea party!")
@@ -91,10 +114,8 @@ class BrandeRoom:
     '-------'
 
                      """)
-        # Do we move back to main to start over?
-        # How do we give key here and move on??
+            print(f'\nYou have obtained {self.key} out of four keys.')
+
         elif response != "keyboard":
             print("Stumped you. Adventure over.")
             # Do we quit or go back to main here??
-            # self.key += 1
-            # print(self.key)
