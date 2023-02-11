@@ -23,6 +23,7 @@ class Main:
         brandes_room.BrandeRoom(self.key).entrance()
 
     def start_adventure(self):
+
         start = input(
             'La la la la...oh! I didn\'t see you there...I was just washing my majestic white fur.\n\nYou wouldn\'t be interested in following a beautiful rodent into a hole would you?\nI am about to meander down...I got a notification that it was going to rain on my Apple Watch.\n Would you be interested in coming with me to Wonderland?\nYes or No:\n>')
         if start.lower() == 'yes' or start.lower() == 'y' or start == '1':

@@ -10,7 +10,7 @@ class Hearts_Room:
         print("Hello traveler!")
 
     def entrance(self):
-        print("While following your groundhog friend,you have stumbled into the kingdom of hearts. The queen is convinced you have stolen her tarts. If you wish to be free, and avoid her majesty.You must answer this rhyme, but make haste, make haste! three guesses seal you fate.")
+        print("While following your groundhog friend,you have stumbled into the kingdom of hearts. \n The queen is convinced you have stolen her tarts. \n If you wish to be free, and avoid her majesty. \n You must answer this rhyme, but make haste, make haste! three guesses seal you fate.")
 
     def play(self):
         self.queens_riddle()
@@ -19,7 +19,46 @@ class Hearts_Room:
 
     def queens_riddle(self):
 
-        print("While following your groundhog friend,you have stumbled into the kingdom of hearts. The queen is convinced you have stolen her tarts. If you wish to be free, and avoid her majesty.You must answer this rhyme, but make haste, make haste! three guesses seal you fate.")
+        print("While following your groundhog friend,you have stumbled into the kingdom of hearts.\n The queen is convinced you have stolen her tarts.\n If you wish to be free, and avoid her majesty. \n You must answer this rhyme, but make haste, make haste! three guesses seal you fate.")
+        print(r"""
+                                  ,;;;, 
+                                ,;;;;;;;, 
+             .;;;,            ,;;;;;;;;;;;, 
+            .;;%%;;;,        ,;;;;;;;;;;;;;, 
+            ;;%%%%%;;;;,.    ;;;;;;;;;;;;;;; 
+            ;;%%%%%%%%;;;;;, ;;;;;;;;;;;;;;; 
+            `;;%%%%%%%%%;;;;;,;;;;;;;;;;;;;' 
+             `;;%%%%%%%%%%;;;;,;;;;;;;;;;;' 
+               `;;;%%%%%%%%;;;;,;;;;;;;;;' 
+                  `;;;%%%%%%;;;;.;;;.;;; 
+                     `;;;%%%;;;;;;.;;;,; .,;;' 
+                         `;;;;;;;;;;,;;;;;;'.,;;;, 
+                          ;;;;;;;;;;;;;;;;;;;;;,. 
+          .          ..,,;;;;;......;;;;;;;.... '; 
+          ;;,..,;;;;;;;;;;;;..;;;;;;..;;;;.;;;;;. 
+           ';;;;;;;;;;;;;;..;;;a@@@@a;;;;;;;a@@@@a, 
+        .,;;;;;;;;;;;;;;;.;;;a@@@@@@@@;;;;;,@@@@@@@a, 
+      .;;;,;;;;;;;;;;;;;;;;;@@@@@'  @@;;;;;;,@  `@@@@;, 
+     ;' ,;;;,;;;;;;;;;;;;;;;@@@@@aa@@;;;;,;;;,@aa@@@@;;;,.,; 
+       ;;;,;;;;;;;;;;;;;;;;;;@@@@@@@;;;,;a@@'      `;;;;;;;' 
+       ' ;;;,;;;;;;;;;;;;;;;;;;;;;;;;,;a@@@       #  ;;,;;, 
+.//////,,;,;;;;;;;;;;;;;;;,;;;;;;;;,;;a@@@a,        ,a;;;,;;, 
+%,/////,;;;;;;;;;;;;;;;;;;;;,;,;,;;;;a@@@@@@aaaaaaa@@@;;;;;'; 
+`%%%%,/,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;@@@@@@@@@@@;00@@;;;;;' 
+  %%%%%%,;;;;;;;;;;;;;;;;;;;;;;;;;;;a@@@@@@@@@@;00@@;;;;;' 
+   `%%%%%%%%%%,;;;;;;;;;;;;;;;;;;;;a@@@@@@@@@;00@@;;;;;' 
+     `%%%%%%%%%%%%%%%,::::;;;;;;;;a@@@@@@@;00@@@::;;;%%%%%, 
+       `%%%%%%%%%%%%%%%,::::;;;;;@@@@@@' 0@@@@::;;%%%%%%%%' 
+          Oo%%%%%%%%%%%%,::::;;a@@@@@'  ,@@@::;;%%%%%%%' 
+           `OOo%%%%%%%%%%,::::@@@@@'    @@;::;%%%%%%' 
+             `OOOo%%%%%%%%,:::@@@@,;;;,a@:;;%%%%%' 
+               `OOOOOo%%%%%,:::@@@aaaa@';;%%%%' 
+                  `OOOO;@@@@@@@@aa@@@@@@@@@' 
+                      ;@@@@@@@@@@@@@@@@@@@' 
+                       @@@@@@@@'`@@@@@@@@' 
+                       `@@@@@'    @@@@@' 
+                        `@@'       @@'
+                        """)
         word_to_guess = ["watermelon"]
         word = random.choice(word_to_guess)
 
@@ -28,7 +67,7 @@ class Hearts_Room:
         guessed_letters = []
         guessed_words = []
         tries = 3
-        print("There was a green house. Inside the green house there was a white house. Inside the white house there was a red house. Inside the red house there were lots of babies. What is it?")
+        print("There was a green house. Inside the green house there was a white house.\n Inside the white house there was a red house. \n Inside the red house there were lots of babies. \n What is it?")
         print(word_display)
         print("you have", tries, "tries")
         print("\n")
@@ -41,7 +80,7 @@ class Hearts_Room:
                     print(
                         "There is no guessing twice or thrice of the same letter,if you wish to escape I suggest you do better", guess)
                 elif guess not in word:
-                    print(guess, "Better guess again, or its off with your head!")
+                    print(guess, "Better guess again, or its off with our heads!")
                     tries -= 1
                     guessed_letters.append(guess)
                 else:
@@ -59,6 +98,7 @@ class Hearts_Room:
             elif len(guess) == len(word) and guess.isalpha():
                 if guess in guessed_words:
                     print("Please try again, I dont want to paint the roses red", guess)
+
                 elif guess != word:
                     print(guess, "Perhaps it is a fruit of sorts")
                     tries -= 1
@@ -68,14 +108,49 @@ class Hearts_Room:
                     word_display = word
 
             else:
-                print("Youre time is running short dear friend")
+                print(
+                    "Youre time is running short dear friend \n Please try again, I dont want to paint the roses red")
+                print(r"""
+                  __
+                              ___  _// \
+                            _/   \/__|_ \
+                           /  __//_/==\_| ___
+                         / | / /|// == \ \   /
+                         |  | |\|| //_\ | |_/
+                          \  \ \\ / \_/| || \
+                           \___/\\| _  ///___\
+                             \__|\_\=//_// _\_|
+                                \___\_____/
+                               !! \____/
+                              !!
+                               !!
+                    ___      -(!!      __ ___ _
+                   |\|  \       !!_.-~~ /|\-  \~-._
+                   | -\| |      !!/   /  | |\- | |\ \
+                    \__-\|______ !!  |    \___\|  \_\|
+              _____ _.-~/|\     \\!!  \  |  /       ~-.
+            /     /|  / /|  \    \!!    \ /          |\~-
+          /  ---/| | |   |\  |     !!                 \__|
+         | ---/| | |  \ /|  /    -(!!
+         | -/| |  /     \|/        !!
+         |/____ /                  !!)-
+                                   !!
+                """)
             print(word_display)
             print(tries)
             print("\n")
             if guessed:
                 self.key += 1
                 print(
-                    "It seems to me that her majesty is appeased, perhaps we should flee and take with us this key")
+                    "It seems to me that her majesty is appeased, perhaps we should flee \n ...I also have a confession to make. I stole the queens tart \n I am sure it will go swell with a cup of tea.")
+                print(r"""
+            (
+              )
+         __..---..__
+     ,-='  /  |  \  `=-.
+    :--..___________..--;
+     \.,_____________,./ 
+                """)
 
             if tries == 0:
                 print("I do hope the tart was worth it.", word)
