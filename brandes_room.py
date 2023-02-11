@@ -79,10 +79,22 @@ class BrandeRoom:
         if response == "keyboard":
             self.key += 1
             print("Way to go!")
-            # Do we move back to main to start over?
-            # How do we give key here and move on??
+            print(r"""
+    )  (
+     (   ) )
+      ) ( (
+    _______)_
+ .-'---------|  
+( C|/\/\/\/\/|
+ '-./\/\/\/\/|
+   '_________'
+    '-------'
+
+                     """)
+        # Do we move back to main to start over?
+        # How do we give key here and move on??
         elif response != "keyboard":
             print("Stumped you. Adventure over.")
             # Do we quit or go back to main here??
-        self.key += 1
-        print(self.key)
+            self.key += 1
+            print(self.key)
