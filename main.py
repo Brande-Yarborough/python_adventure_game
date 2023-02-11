@@ -145,7 +145,6 @@ jgs      ~"` ~"~~`
                 self.main_play()
 
             elif players_choice == '3':
-                print("\nA mirror appears before you and you approach it. You reach out to touch it and when your hand touches the one of your reflection, fall through the veneer.")
                 self.mirror_room()
 
             elif players_choice == '4':
