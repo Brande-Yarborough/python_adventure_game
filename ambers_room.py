@@ -7,16 +7,13 @@ class Hearts_Room:
     def __init__(self, key,):
         self.key = key
 
-    def check_out(self):
-        print("Hello traveler!")
-
     def entrance(self):
         print("While following your groundhog friend,you have stumbled into the kingdom of hearts. \n The queen is convinced you have stolen her tarts. \n If you wish to be free, and avoid her majesty. \n You must answer this rhyme, but make haste, make haste! three guesses seal you fate.")
 
     def play(self):
-        self.queens_riddle()
-        self.key += 1
+        update_value = self.queens_riddle()
         print(self.key)
+        return update_value
 
     def queens_riddle(self):
         time.sleep(2)
@@ -101,6 +98,7 @@ class Hearts_Room:
         guessed_letters = []
         guessed_words = []
         tries = 3
+
         print("There once was a green house.")
         time.sleep(2)
         print("Inside the green house there was a white house.")
@@ -182,8 +180,9 @@ class Hearts_Room:
             print(word_display)
             print(tries)
             print("\n")
+
             if guessed:
-                self.key += 1
+
                 print(
                     "It seems to me that her majesty is appeased, perhaps we should flee")
                 time.sleep(2)
@@ -198,6 +197,7 @@ class Hearts_Room:
     :--..___________..--;
      \.,_____________,./ 
                 """)
+                return self.key + 1
 
             if tries == 0:
                 print("I do so hope that the tart was worth it...unfortunately your guesses werent perfect.So now it is time to paint roses red. As her Majesty decress Off, off, off with thier heads!")
@@ -224,5 +224,4 @@ class Hearts_Room:
       |      /____/\____\
 
                 """)
-
-                break
+                return self.key

@@ -1,5 +1,5 @@
 import string
-import josiahs_room
+# import josiahs_room
 import conors_room
 import ambers_room
 import brandes_room
@@ -11,7 +11,8 @@ class Main:
         self.key = key
 
     def heartkingdom_room(self):
-        ambers_room.Hearts_Room(self.key).play()
+        result = ambers_room.Hearts_Room(self.key).play()
+        self.key = result
 
     def main_play(self):
         result = conors_room.ConorRoom(self.key).play()
