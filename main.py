@@ -88,7 +88,9 @@ game.start_adventure()
 
 while game.key < 4:
     game.next_sequence()
-
+if game.key == 4:
+    # call final room here
+    game.finalroom()
 print("\n\n\n----------------GAME OVER----------------")
 
 
