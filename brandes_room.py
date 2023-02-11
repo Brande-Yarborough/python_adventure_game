@@ -7,6 +7,25 @@ class BrandeRoom:
 
     def entrance(self):
         print("Welcome to the cave of computers!")
+        print(r"""
+                            | ___  o|
+                         |[_-_]_ |
+      ______________     |[_____]|
+     |.------------.|    |[_____]|
+     ||            ||    |[====o]|
+     ||            ||    |[_.--_]|
+     ||            ||    |[_____]|
+     ||            ||    |      :|
+     ||____________||    |      :|
+ .==.|""  ......    |.==.|      :|
+ |::| '-.________.-' |::||      :|
+ |''|  (__________)-.|''||______:|
+ `""`_.............._\""`______
+    /:::::::::::'':::\`;'-.-.  `\
+   /::=========.:.-::"\ \ \--\   \
+   \`""""""""""""""""`/  \ \__)   \
+ `""""""""""""""""`    '========'
+""")
         time.sleep(2)
         print("As you enter, you see glowing screens with people seated, typing away, and meet your guide, \n Mady Hatter.")
         time.sleep(2)
@@ -16,6 +35,7 @@ class BrandeRoom:
             "Do you wish to stay or leave? Enter Stay or Leave: ").lower()
         if choice == "stay":
             print("This journey will be unforgettable! Good choice!")
+            time.sleep(3)
             # How do I move from here to the cave if choice is stay??
             self.cave()
         elif choice == "leave":
@@ -55,7 +75,7 @@ class BrandeRoom:
         print("Solve this riddle to move on and make your way to the tea party!")
         time.sleep(2)
         print("I have keys but do not lock. I have space but have no room. You can enter but not come in. What am I? ")
-        response = input("_ _ _ _ _ _ _ _").lower()
+        response = input("_ _ _ _ _ _ _ _: ").lower()
         if response == "keyboard":
             self.key += 1
             print("Way to go!")
