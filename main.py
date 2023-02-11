@@ -52,6 +52,8 @@ game = Main(0)
 
 game.start_adventure()
 
+print("----------------GAME OVER----------------")
+
 
 #
 # else:
