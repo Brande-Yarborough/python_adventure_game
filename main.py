@@ -19,7 +19,7 @@ class Main:
         josiahs_room.Mirror_Room(self.key).enter()
 
     def computer_room(self):
-        brandes_room.BrandeRoom(self.key).play()
+        brandes_room.BrandeRoom(self.key).entrance()
 
     def start_adventure(self):
         start = input(

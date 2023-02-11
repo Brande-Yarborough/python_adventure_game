@@ -1,11 +1,17 @@
+import time
+
+
 class BrandeRoom:
     def __init__(self, key):
         self.key = key
 
     def entrance(self):
         print("Welcome to the cave of computers!")
-        print("As you enter, you see glowing screens with people seated, typing away, and meet your guide, Mady Hatter.")
-        print("Mady Hatter tells you that you have two choices, follow her into the cave and help solve a riddle to obtain a key or leave. ")
+        time.sleep(2)
+        print("As you enter, you see glowing screens with people seated, typing away, and meet your guide, \n Mady Hatter.")
+        time.sleep(2)
+        print("Mady Hatter tells you that you have two choices, follow her into the cave and help solve a riddle to \n obtain a key or leave. ")
+        time.sleep(2)
         choice = input(
             "Do you wish to stay or leave? Enter Stay or Leave: ").lower()
         if choice == "stay":
@@ -20,12 +26,19 @@ class BrandeRoom:
 
     def cave(self):
         print("Mady Hatter says we are all mad here, mad about code.")
-        print("Now that you are here, you must also finish your pixel perfect project in addition to solving the riddle.")
+        time.sleep(2)
+        print("Now that you are here, you must also finish your pixel perfect project in addition to solving \n the riddle.")
+        time.sleep(2)
         print("Mady Hatter knows you can do it, but you are doubting yourself.")
-        print("It feels like you are in a dream, where there are lines of code but when you wake up, your screen is totally blank.")
+        time.sleep(2)
+        print("It feels like you are in a dream, where there are lines of code but when you wake up, your screen is \n totally blank.")
+        time.sleep(2)
         print("Mady Hatter asks what you got, and helps you persist through the project. ")
+        time.sleep(2)
         print("You finally finish your project, and can continue on to solve the riddle. ")
-        response = input("Are you up for the challenge: Yes or No").lower()
+        time.sleep(2)
+        response = input(
+            "Are you up for the challenge? Enter Yes or No: ").lower()
         if response == "yes":
             print("Riddle me this...")
             # How do I move on to the riddle or play part? call it here?
@@ -40,9 +53,11 @@ class BrandeRoom:
 
     def play(self):
         print("Solve this riddle to move on and make your way to the tea party!")
+        time.sleep(2)
         print("I have keys but do not lock. I have space but have no room. You can enter but not come in. What am I? ")
         response = input("_ _ _ _ _ _ _ _").lower()
         if response == "keyboard":
+            self.key += 1
             print("Way to go!")
             # Do we move back to main to start over?
             # How do we give key here and move on??
