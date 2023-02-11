@@ -63,7 +63,7 @@ class ConorRoom:
             self.sinking_down()
         if answer1 == '2':
             print(
-                'I do believe my flippers are a flailing....WE''RE SINKING WE''RE SINKING')
+                'I do believe my flippers are a flailing....WE\'RE SINKING WE\'RE SINKING')
             self.sinking_down()
 
     def sinking_down(self):
@@ -95,19 +95,23 @@ i#######mmb.    ,dnnnnnnnnnnnnvnb.    ,dv%v%%%%%%;..:::::%:%%'
          `""Y8@@@nmnnnnnnnnnvnvvvv%%%%""'
                  '''''""""""'''''
                  """)
-        print("Oh! I see my watch! It's wayyyyyyyy down there...under that ugly fish fellow...")
+        print("Oh wait! I see my watch! It\'s wayyyyyyyy down there...under that ugly fish fellow...")
         answer2 = input(
             'Will you go grab it for me? (1) Of course! I would love to help or (2) Absolutely not...get me back to the surface!')
         if answer2 == '1':
-            print('Why thank you! Now that I can finally tell the time\n\n          ....good heavens! We are very late! \n\n            I barely have time to recite my poem!...')
-            time.sleep(0.5)
+            print('Why thank you! Now that I can finally tell the time...\n\n')
+            time.sleep(1)
+            print('          ....good heavens! We are VERY late! \n\n            I will barely have time to recite my lengthy poem!...')
+            time.sleep(2)
             self.ask_the_riddle()
         else:
-            print('This is a lousy way to repay our friendship...well I guess we''ll never figure out what time it is\n....since we aren''t on a schedule, we have time to read my poem!')
+            print('This is a lousy way to repay our friendship...well I guess we\'ll never figure out what time it is...')
+            time.sleep(1)
+            print(
+                '\n....since we aren\'t on a schedule, we have time to read my lengthy poem!')
             self.ask_the_riddle()
 
     def ask_the_riddle(self):
-        # This is the first function called
         print(r"""
 
 
@@ -146,6 +150,6 @@ i#######mmb.    ,dnnnnnnnnnnnnvnb.    ,dv%v%%%%%%;..:::::%:%%'
         riddle_answer = input('Answer carefully: ').lower()
         if riddle_answer == 'morse code':
             self.key += 1
-            print('Absolutely brilliant!')
+            print('Absolutely brilliant! Now, WAKE UP')
         else:
-            print('OOps! Hope it wasn''t a technical snafu...you got it wrong.')
+            print('OOps! Hope it wasn\'t a technical snafu...you got it wrong.')

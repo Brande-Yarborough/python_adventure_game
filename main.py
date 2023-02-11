@@ -23,7 +23,7 @@ class Main:
 
     def start_adventure(self):
         start = input(
-            'La la la la...oh! I didn''t see you there...I was just washing my majestic white fur.\n\n You wouldn''t be interested in following a beautiful rodent into a hole would you?\n I am about to meander down into this tunnel ...I just got a notification that it was going to rain. Would you be interested in coming with me to Wonderland? \nYes or No: ')
+            'La la la la...oh! I didn\'t see you there...I was just washing my majestic white fur.\n\n You wouldn\'t be interested in following a beautiful rodent into a hole would you?\n I am about to meander down...I got a notification that it was going to rain on my Apple Watch. Would you be interested in coming with me to Wonderland?\nYes or No: ')
         if start.lower() == 'yes' or start.lower() == 'y' or start == '1':
             print("\nOh delightful. We barely fit...Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!\n")
             players_choice = input(
