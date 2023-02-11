@@ -10,5 +10,6 @@ class ConorRoom:
         print("welcome to the beach \n the ocean is a powerful and mysterious creature")
 
     def play(self):
+        # This is the first function called.
         self.key += 1
         print(self.key)

@@ -29,16 +29,16 @@ class Main:
             players_choice = input(
                 'which adventure would you like to start with: Room 1, 2, 3 or 4? ').lower()
 
-            if players_choice == 1:
+            if players_choice == '1':
                 print("you have chose to the journey to the kingdom of hearts")
                 self.heartkingdom_room()
-            elif players_choice == 2:
+            elif players_choice == '2':
                 self.main_play()
 
-            elif players_choice == 3:
+            elif players_choice == '3':
                 self.mirror_room()
 
-            elif players_choice == 4:
+            elif players_choice == '4':
                 self.computer_room()
 
             else:
