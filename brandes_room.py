@@ -86,7 +86,3 @@ class BrandeRoom:
             # Do we quit or go back to main here??
         self.key += 1
         print(self.key)
-
-    def check_out(self):
-        # Do we go back to main here??
-        print("Hello traveler!")

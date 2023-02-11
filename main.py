@@ -3,6 +3,7 @@ import string
 import conors_room
 import ambers_room
 import brandes_room
+import os
 
 
 class Main:
@@ -23,11 +24,12 @@ class Main:
 
     def start_adventure(self):
         start = input(
-            'La la la la...oh! I didn\'t see you there...I was just washing my majestic white fur.\n\nYou wouldn\'t be interested in following a beautiful rodent into a hole would you?\nI am about to meander down...I got a notification that it was going to rain on my Apple Watch. Would you be interested in coming with me to Wonderland?\nYes or No:\n>')
+            'La la la la...oh! I didn\'t see you there...I was just washing my majestic white fur.\n\nYou wouldn\'t be interested in following a beautiful rodent into a hole would you?\nI am about to meander down...I got a notification that it was going to rain on my Apple Watch.\n Would you be interested in coming with me to Wonderland?\nYes or No:\n>')
         if start.lower() == 'yes' or start.lower() == 'y' or start == '1':
-            print("\nOh delightful. We barely fit...Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!\n")
+            print("\nOh delightful. We barely fit...Get ready to encounter many mythical creatures on your adventure.\n May the odds be ever in your favor!\n")
             players_choice = input(
-                'Which adventure would you like to start with:\n(1) Room 1,\n(2) a seafaring journey,\n(3) the Mysterious Mirror, or\n(4)?\n>').lower()
+                'Which adventure would you like to start with:\n(1) The Kingdom of Hearts,\n(2) A Seafaring Journey,\n(3) The Mysterious Mirror, or\n(4) The Cave of Computers?\n>').lower()
+            os.system("clear")
 
             if players_choice == '1':
                 print("You have chosen a journey to the kingdom of hearts. With the help of you Grounhog friend you must evade the queens wrath. Be wary of her tarts of you shall pain the roses red, and possible lose your head.")
