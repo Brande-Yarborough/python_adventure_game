@@ -27,7 +27,7 @@ class Main:
         if start.lower() == 'yes' or start.lower() == 'y' or start == '1':
             print("\nOh delightful. We barely fit...Get ready to encounter many mythical creatures on your adventure. May the odds be ever in your favor!\n")
             players_choice = input(
-                'which adventure would you like to start with: Room 1, (2) a seafaring journey , 3 or 4? ').lower()
+                'which adventure would you like to start with: Room 1, (2) a seafaring journey , 3 or 4?\n>').lower()
 
             if players_choice == '1':
                 print("you have chose to journey to the kingdom of hearts")
@@ -36,6 +36,7 @@ class Main:
                 self.main_play()
 
             elif players_choice == '3':
+                print("\nMirror appears before you and you approach it. You reach out to touch it and when your hand touches the one of your reflection, fall through the veneer.")
                 self.mirror_room()
 
             elif players_choice == '4':
