@@ -24,7 +24,7 @@ class Main:
         brandes_room.BrandeRoom(self.key).entrance()
 
     def finalroom(self):
-        print("Congratualtions! Youve managed to solve all the riddles, As a reward please join me for tea")
+        print("Congratulations! You\'ve managed to solve all the riddles, As a reward please join me for tea")
         print(r"""
         
                                 ,.        ,.      ,.
@@ -118,7 +118,6 @@ class Main:
 
     
         """)
-        pass
 
     def start_adventure(self):
 
@@ -191,6 +190,7 @@ while game.key < 4:
 if game.key == 4:
     # call final room here
     game.finalroom()
+
 print("\n\n\n----------------GAME OVER----------------")
 
 
