@@ -57,10 +57,10 @@ class ConorRoom:
   888P
  88P
  V""")
-        answer1 = input('Oh my......It looks like I have gotten myself\n                                                    into quite a bit of trouble...\n\nI don''t look anything like a groundhog anymore...and where is my watch??\n do you want to (1) dive deeper or (2) come up for air?')
+        answer1 = input('Oh my......It looks like I have gotten myself\n                                                  ...into quite a bit of trouble...\n\nI don''t look anything like a groundhog anymore...and where is my watch??\n\n do you want to (1) dive deeper or (2) come up for air?')
         if answer1 == '1':
-            print('Hmmm....what a devastating choice.')
             self.sinking_down()
+            print('Hmmm....that is a brave choice.')
         if answer1 == '2':
             print(
                 'I do believe my flippers are a flailing....WE\'RE SINKING WE\'RE SINKING')
@@ -190,4 +190,6 @@ ___        _ --__ -                 /'         :`--.______,-::  /
             self.key += 1
             print('Absolutely brilliant! Now, WAKE UP')
         else:
+            for each in range(0, 2):
+                print('We will get a few more tries!')
             print('OOps! Hope it wasn\'t a technical snafu...you got it wrong.')
