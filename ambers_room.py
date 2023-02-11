@@ -1,4 +1,5 @@
 import random
+import time
 
 
 class Hearts_Room:
@@ -18,8 +19,41 @@ class Hearts_Room:
         print(self.key)
 
     def queens_riddle(self):
+        time.sleep(2)
+        print(r"""
+                         /\/\
+                         \  /
+                  /\/\    \/    /\/\                  
+                  \  / _---|    \  /_ _ _ _ _ 
+                   \/   ---|     \/ ]-I-I-I-[ 
+   _ _ _ _ _ _  _---|      | _---|   \ ` '  / 
+   ]-I-I-I-I-[   ---|      |  ---|    |.   | 
+    \ `   '_/       |     / \    |    | /^\| 
+     [*]  __|       ^    / ^ \   ^    | |*|| 
+     |__   ,|      / \  /    `\ / \   | ===| 
+  ___| ___ ,|__   /    /=_=_=_=\   \  |,  _|
+  I_I__I_I__I_I  (====(_________)___|_|____|____
+  \-\--|-|--/-/  |     I  [ ]__I I_I__|____I_I_| 
+   |[]      '|   | []  |`__  . [  \-\--|-|--/-/  
+   |.   | |' |___|_____I___|___I___|---------| 
+  / \| []   .|_|-|_|-|-|_|-|_|-|_|-| []   [] | 
+ <===>  |   .|-=-=-=-=-=-=-=-=-=-=-|   |    / \  
+ ] []|`   [] ||.|.|.|.|.|.|.|.|.|.||-      <===> 
+ ] []| ` |   |/////////\\\\\\\\\\.||__.  | |[] [ 
+ <===>     ' ||||| |   |   | ||||.||  []   <===>
+  \T/  | |-- ||||| | O | O | ||||.|| . |'   \T/ 
+   |      . _||||| |   |   | ||||.|| |     | |
+../|' v . | .|||||/____|____\|||| /|. . | . ./
+.|//\............/...........\........../../\\\
 
-        print("While following your groundhog friend,you have stumbled into the kingdom of hearts.\n The queen is convinced you have stolen her tarts.\n If you wish to be free, and avoid her majesty. \n You must answer this rhyme, but make haste, make haste! three guesses seal you fate.")
+        """)
+        print("While following your groundhog friend,you have stumbled into the kingdom of hearts.")
+        time.sleep(2)
+        print(" The queen is convinced you have stolen her tarts")
+        time.sleep(2)
+        print("If you wish to be free, and avoid her majesty.")
+        time.sleep(2)
+        print("For the tart that you ate,three guesses seal you fate. Make haste, make haste, you must solve this rhyme,\n her patience is thin, there is not much time")
         print(r"""
                                   ,;;;, 
                                 ,;;;;;;;, 
@@ -67,9 +101,17 @@ class Hearts_Room:
         guessed_letters = []
         guessed_words = []
         tries = 3
-        print("There was a green house. Inside the green house there was a white house.\n Inside the white house there was a red house. \n Inside the red house there were lots of babies. \n What is it?")
+        print("There once was a green house.")
+        time.sleep(2)
+        print("Inside the green house there was a white house.")
+        time.sleep(2)
+        print("Inside the white house there was a red house.")
+        time.sleep(2)
+        print("Inside the red house there were lots of babies.")
+        time.sleep(2)
+        print(" What is it?")
         print(word_display)
-        print("you have", tries, "tries")
+        print("you have", tries, "guesses")
         print("\n")
 
         while not guessed and tries < 4:
@@ -78,7 +120,7 @@ class Hearts_Room:
             if len(guess) == 1 and guess.isalpha():
                 if guess in guessed_letters:
                     print(
-                        "There is no guessing twice or thrice of the same letter,if you wish to escape I suggest you do better", guess)
+                        "There is no guessing twice or thrice of the same letter,if you wish to escape I suggest you do better.", guess)
                 elif guess not in word:
                     print(guess, "Better guess again, or its off with our heads!")
                     tries -= 1
@@ -108,8 +150,9 @@ class Hearts_Room:
                     word_display = word
 
             else:
-                print(
-                    "Youre time is running short dear friend \n Please try again, I dont want to paint the roses red")
+                print("Youre time is running short dear friend")
+                time.sleep(2)
+                print(" Please try again, I dont want to paint the roses red")
                 print(r"""
                   __
                               ___  _// \
@@ -142,7 +185,11 @@ class Hearts_Room:
             if guessed:
                 self.key += 1
                 print(
-                    "It seems to me that her majesty is appeased, perhaps we should flee \n ...I also have a confession to make. I stole the queens tart \n I am sure it will go swell with a cup of tea.")
+                    "It seems to me that her majesty is appeased, perhaps we should flee")
+                time.sleep(2)
+                print(
+                    "...I also have a confession to make. I stole the queens tart you see")
+                print("After all that trouble it will go well with a cup of tea.")
                 print(r"""
             (
               )
@@ -153,5 +200,29 @@ class Hearts_Room:
                 """)
 
             if tries == 0:
-                print("I do hope the tart was worth it.", word)
+                print("I do so hope that the tart was worth it...unfortunately your guesses werent perfect.So now it is time to paint roses red. As her Majesty decress Off, off, off with thier heads!")
+                print(r"""
+  ,   A           {}
+ / \, | ,        .--.
+|    =|= >      /.--.\
+ \ /` | `       |====|
+  `   |         |`::`|  
+      |     .-;`\..../`;_.-^-._
+     /\\/  /  |...::..|`   :   `|
+     |:'\ |   /'''::''|   :     |
+      \ /\;-,/\   ::  |. /\/\   |
+      |\ <` >  >._::_.|  \  /   |
+      | `""`  /   ^^  |   \/    |
+      |       |       \    :    /
+      |       |        \   :   / 
+      |       |___/\___|`-.:.-`
+      |        \_ || _/    `
+      |        <_ >< _>
+      |        |  ||  |
+      |        |  ||  |
+      |       _\.:||:./_
+      |      /____/\____\
+
+                """)
+
                 break
