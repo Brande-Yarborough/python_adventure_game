@@ -44,7 +44,6 @@ class BrandeRoom:
             print(update_value)
             return update_value
 
-        # self.cave()
         elif choice == "leave":
             print(
                 "You thought you were leaving, but get stuck in an infinite loop of nonsense. Adventure over.")
@@ -95,7 +94,6 @@ class BrandeRoom:
             print("\nRiddle me this...")
             # call self.play here to move on to riddle
             return self.play()
-            # self.play()
         elif response == "no":
             print(
                 "You did not accept the challenge, and are now sent down a python hole that leads to the brain of a computer.")
