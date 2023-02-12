@@ -1,4 +1,5 @@
 import time
+import os
 
 
 class BrandeRoom:
@@ -6,6 +7,9 @@ class BrandeRoom:
         self.key = key
 
     def entrance(self):
+        update_value = self.key  # This sets it to the initilization value.
+        print(self.key)
+
         print("Welcome to the cave of computers!")
         print(r"""
                             | ___  o|
@@ -27,7 +31,7 @@ class BrandeRoom:
  `""""""""""""""""`    '========'
 """)
         time.sleep(2)
-        print("As you follow the groundhog inside, you see glowing screens with people seated, typing away, and meet your guide, \n Mady Hatter.")
+        print("As you follow the groundhog inside, you see glowing screens with people seated, typing away, and meet \nyour guide, Mady Hatter.")
         time.sleep(2)
         print("Mady Hatter tells you that you have two choices, follow her into the cave and help solve a riddle to \n obtain a key or leave. ")
         time.sleep(2)
@@ -36,8 +40,14 @@ class BrandeRoom:
         if choice == "stay":
             print("This journey will be unforgettable! Good choice!")
             time.sleep(3)
+
             # call self.cave to move from here to the cave if choice is stay
-            self.cave()
+            update_value = self.cave()
+            print(update_value)
+            return update_value
+            os.system("clear")
+
+            # self.cave()
         elif choice == "leave":
             print(
                 "You thought you were leaving, but get stuck in an infinite loop of nonsense. Adventure over.")
@@ -86,13 +96,15 @@ class BrandeRoom:
         if response == "yes":
             print("Riddle me this...")
             # call self.play here to move on to riddle
-            self.play()
+            return self.play()
+            # self.play()
         elif response == "no":
             print(
                 "You did not accept the challenge, and are now sent down a python hole that leads to the brain of a computer.")
             print(
                 "It appears the computer has a virus, or a terminal illness-did you catch that knee slapping joke? Adventure over.")
             # Do we quit here or send back to main to start over??
+            return self.key
 
     def play(self):
         print("Solve this riddle to move on and make your way to the tea party!")
@@ -100,7 +112,7 @@ class BrandeRoom:
         print("I have keys but do not lock. I have space but have no room. You can enter but not come in. What am I? ")
         response = input("_ _ _ _ _ _ _ _: ").lower()
         if response == "keyboard":
-            self.key += 1
+            result = self.key + 1
             print("Way to go!")
             print(r"""
     )  (
@@ -114,8 +126,10 @@ class BrandeRoom:
     '-------'
 
                      """)
-            print(f'\nYou have obtained {self.key} out of four keys.')
+            update_value = result
+            return update_value
 
         elif response != "keyboard":
             print("Stumped you. Adventure over.")
             # Do we quit or go back to main here??
+            return self.key

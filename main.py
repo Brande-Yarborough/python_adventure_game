@@ -22,7 +22,8 @@ class Main:
         josiahs_room.Mirror_Room(self.key).enter()
 
     def computer_room(self):
-        brandes_room.BrandeRoom(self.key).entrance()
+        result = brandes_room.BrandeRoom(self.key).entrance()
+        self.key = result
 
     def finalroom(self):
         print("Congratulations! You\'ve managed to solve all the riddles, As a reward please join me for tea")
@@ -123,7 +124,7 @@ class Main:
     def start_adventure(self):
 
         start = input(
-            'La la la la...oh! I didn\'t see you there...I was just washing my majestic white fur.\n\nYou wouldn\'t be interested in following a beautiful rodent into a hole would you?\nI am about to meander down...I got a notification that it was going to rain on my Apple Watch. Would you be interested in coming with me to Wonderland?\nYes or No:\n> ')
+            'La la la la...oh! I didn\'t see you there...I was just washing my majestic white fur.\n\nYou wouldn\'t be interested in following a beautiful rodent into a hole would you?\nI am about to meander down...I got a notification that it was going to rain on my Apple Watch. \nWould you be interested in coming with me to Wonderland?\nYes or No:\n> ')
         if start.lower() == 'yes' or start.lower() == 'y' or start == '1':
             print("\nOh delightful. We barely fit...Get ready to encounter many mythical creatures on your adventure.\n May the odds be ever in your favor!\n")
             print(r"""
@@ -188,7 +189,7 @@ while game.key < 4:
     print(f'Current keys = {game.key}')
     game.next_sequence()
 
-if game.key == 4:
+if game.key >= 4:
     # call final room here
     game.finalroom()
     print("\n\n\n----------------GAME OVER----------------")
