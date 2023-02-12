@@ -118,7 +118,7 @@ class Hearts_Room:
             if len(guess) == 1 and guess.isalpha():
                 if guess in guessed_letters:
                     print(
-                        "There is no guessing twice or thrice of the same letter,if you wish to escape I suggest you do better.", guess)
+                        "There is no guessing twice or thrice of a letter,if you wish to escape I suggest you do better.", guess)
                 elif guess not in word:
                     print(guess, "Better guess again, or its off with our heads!")
                     tries -= 1
@@ -148,9 +148,9 @@ class Hearts_Room:
                     word_display = word
 
             else:
-                print("Youre time is running short dear friend")
+                print("Your time is running short dear friend!")
                 time.sleep(2)
-                print(" Please try again, I dont want to paint the roses red")
+                print(" Please try again, I dont want to paint the roses red.")
                 print(r"""
                   __
                               ___  _// \
