@@ -129,7 +129,29 @@ class BrandeRoom:
             update_value = result
             return update_value
 
-        elif response != "keyboard":
+        else:
+            for guesses in range(0, 2):
+                print("Guess again-you have 2 more chances to make it to the tea party.")
+                response = input("_ _ _ _ _ _ _ _: ").lower()
+                if response == "keyboard":
+                    result = self.key + 1
+                    os.system('clear')
+                    print("You did it! Here's your key, now head for the tea!")
+                    print(r"""
+    )  (
+     (   ) )
+      ) ( (
+    _______)_
+ .-'---------|  
+( C|/\/\/\/\/|
+ '-./\/\/\/\/|
+   '_________'
+    '-------'
+
+                     """)
+                    update_value = result
+                    return update_value
+
             print("Stumped you. Adventure over.")
-            # Do we quit or go back to main here??
+    # Do we quit or go back to main here??
             return self.key
