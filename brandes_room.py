@@ -8,11 +8,10 @@ class BrandeRoom:
 
     def entrance(self):
         update_value = self.key  # This sets it to the initilization value.
-        print(self.key)
 
         print("Welcome to the cave of computers!")
         print(r"""
-                            | ___  o|
+                         | ___  o|
                          |[_-_]_ |
       ______________     |[_____]|
      |.------------.|    |[_____]|
@@ -31,37 +30,36 @@ class BrandeRoom:
  `""""""""""""""""`    '========'
 """)
         time.sleep(2)
-        print("As you follow the groundhog inside, you see glowing screens with people seated, typing away, and meet \nyour guide, Mady Hatter.")
+        print("As you follow the groundhog inside, you see glowing screens with people seated, typing away, and meet \nyour guide, Mady Hatter.\n")
         time.sleep(2)
-        print("Mady Hatter tells you that you have two choices, follow her into the cave and help solve a riddle to \n obtain a key or leave. ")
+        print("Mady Hatter tells you that you have two choices, follow her into the cave and help solve a riddle to \n obtain a key or leave and try to find your way back out of the cave all by yourself.\n")
         time.sleep(2)
         choice = input(
             "Do you wish to stay or leave? Enter Stay or Leave: ").lower()
         if choice == "stay":
-            print("This journey will be unforgettable! Good choice!")
+            print("\n This journey will be unforgettable! Good choice!")
             time.sleep(3)
-
             # call self.cave to move from here to the cave if choice is stay
             update_value = self.cave()
             print(update_value)
             return update_value
-            os.system("clear")
 
-            # self.cave()
+        # self.cave()
         elif choice == "leave":
             print(
                 "You thought you were leaving, but get stuck in an infinite loop of nonsense. Adventure over.")
             # Do we quit adventure here or send back to start of main??
 
     def cave(self):
+        os.system('clear')
         print("Mady Hatter says we are all mad here, mad about code.")
         print(r"""
         
                                 ,.--""-._
                             __/         `.
- | Adventures in |     _,**"   "*-.       `.
- |  Wonderland   |   ,'            `.       \
- `---------------'  ;    _,.---._    \  ,'\  \
+                      _,**"   "*-.       `.
+                  ,'            `.       \
+                  ;    _,.---._    \  ,'\  \
                    :   ,'   ,-.. `.   \'   \ :
                    |  ;_\  (___)`  `-..__  : |
                    ;-'`*'"  `*'    `--._ ` | ;
@@ -81,20 +79,20 @@ class BrandeRoom:
                        ;   |.    `. 
                        """)
         time.sleep(2)
-        print("Now that you are here, you must also finish your pixel perfect project in addition to solving \n the riddle.")
+        print("Now that you are here, you must also finish your pixel perfect project in addition to solving \n the riddle.\n")
         time.sleep(2)
-        print("Mady Hatter knows you can do it, but you are doubting yourself.")
+        print("Mady Hatter knows you can do it, but you are doubting yourself.\n")
         time.sleep(2)
-        print("It feels like you are in a dream, where there are lines of code but when you wake up, your screen is \n totally blank.")
+        print("It feels like you are in a dream, where there are lines of code, but when you wake up, your screen is \n totally blank.\n")
         time.sleep(2)
-        print("Mady Hatter asks what you got, and helps you persist through the project. ")
+        print("Mady Hatter asks what you got, and helps you persist through the project.\n")
         time.sleep(2)
-        print("You finally finish your project, and can continue on to solve the riddle. ")
+        print("You finally finish your project, and can continue on to solve the riddle.\n")
         time.sleep(2)
         response = input(
             "Are you up for the challenge? Enter Yes or No: ").lower()
         if response == "yes":
-            print("Riddle me this...")
+            print("\nRiddle me this...")
             # call self.play here to move on to riddle
             return self.play()
             # self.play()
@@ -107,13 +105,14 @@ class BrandeRoom:
             return self.key
 
     def play(self):
-        print("Solve this riddle to move on and make your way to the tea party!")
+        print("Solve this riddle to move on and make your way to the tea party!\n")
         time.sleep(2)
         print("I have keys but do not lock. I have space but have no room. You can enter but not come in. What am I? ")
         response = input("_ _ _ _ _ _ _ _: ").lower()
         if response == "keyboard":
             result = self.key + 1
-            print("Way to go!")
+            os.system('clear')
+            print("You did it! Here's your key, now head for the tea!")
             print(r"""
     )  (
      (   ) )

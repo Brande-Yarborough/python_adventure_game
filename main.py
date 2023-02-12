@@ -1,5 +1,5 @@
 import string
-# import josiahs_room
+import josiahs_room
 import conors_room
 import ambers_room
 import brandes_room
@@ -134,7 +134,7 @@ class Main:
         (`-()_.-=-.
        /66  ,  ,  \
      =(o_/=//_(   /======`
-jgs      ~"` ~"~~`
+          ~"` ~"~~`
 """)
             players_choice = input(
                 'Which adventure would you like to start with:\n(1) The Kingdom of Hearts,\n(2) A Seafaring Journey,\n(3) The Mysterious Mirror, or\n(4) The Cave of Computers?\n>').lower()
