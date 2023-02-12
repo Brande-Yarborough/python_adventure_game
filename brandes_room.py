@@ -29,16 +29,16 @@ class BrandeRoom:
    \`""""""""""""""""`/  \ \__)   \
  `""""""""""""""""`    '========'
 """)
-        time.sleep(2)
+        time.sleep(1)
         print("As you follow the groundhog inside, you see glowing screens with people seated, typing away, and meet \nyour guide, Mady Hatter.\n")
-        time.sleep(2)
+        time.sleep(1)
         print("Mady Hatter tells you that you have two choices, follow her into the cave and help solve a riddle to \n obtain a key or leave and try to find your way back out of the cave all by yourself.\n")
-        time.sleep(2)
+        time.sleep(1)
         choice = input(
             "Do you wish to stay or leave? Enter Stay or Leave: ").lower()
         if choice == "stay":
             print("\n This journey will be unforgettable! Good choice!")
-            time.sleep(3)
+            time.sleep(1)
             # call self.cave to move from here to the cave if choice is stay
             update_value = self.cave()
 
@@ -47,7 +47,8 @@ class BrandeRoom:
                 "You thought you were leaving, but get stuck in an infinite loop of nonsense. Adventure over.")
             # sends back to next sequence with no key
             # return self.key
-            return update_value
+            update_value = self.key
+        return update_value
 
     def cave(self):
         os.system('clear')
@@ -77,17 +78,17 @@ class BrandeRoom:
                        |   |.  `.  :
                        ;   |.    `. 
                        """)
-        time.sleep(2)
+        time.sleep(1)
         print("Now that you are here, you must also finish your pixel perfect project in addition to solving \n the riddle.\n")
-        time.sleep(2)
+        time.sleep(1)
         print("Mady Hatter knows you can do it, but you are doubting yourself.\n")
-        time.sleep(2)
+        time.sleep(1)
         print("It feels like you are in a dream, where there are lines of code, but when you wake up, your screen is \n totally blank.\n")
-        time.sleep(2)
+        time.sleep(1)
         print("Mady Hatter asks what you got, and helps you persist through the project.\n")
-        time.sleep(2)
+        time.sleep(1)
         print("You finally finish your project, and can continue on to solve the riddle.\n")
-        time.sleep(2)
+        time.sleep(1)
         response = input(
             "Are you up for the challenge? Enter Yes or No: ").lower()
         if response == "yes":
@@ -100,11 +101,13 @@ class BrandeRoom:
             print(
                 "It appears the computer has a virus, or a terminal illness-did you catch that knee slapping joke? \nAdventure over.")
             # Do we quit here or send back to main to start over??
-            return update_value
+            # what do I return here? can i get back to next sequence from here?
+            update_value = self.key
+        return update_value
 
     def play(self):
         print("Solve this riddle to move on and make your way to the tea party!\n")
-        time.sleep(2)
+        time.sleep(1)
         print("I have keys but do not lock. I have space but have no room. You can enter but not come in. What am I? ")
         response = input("_ _ _ _ _ _ _ _: ").lower()
         if response == "keyboard":
