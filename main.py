@@ -1,9 +1,10 @@
 import string
-# import josiahs_room
+import josiahs_room
 import conors_room
 import ambers_room
 import brandes_room
 import os
+import time
 
 
 class Main:
@@ -27,6 +28,7 @@ class Main:
 
     def finalroom(self):
         print("Congratulations! You\'ve managed to solve all the riddles, As a reward please join me for tea")
+        time.sleep(1)
         print(r"""
         
                                 ,.        ,.      ,.
