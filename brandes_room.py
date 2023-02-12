@@ -41,13 +41,13 @@ class BrandeRoom:
             time.sleep(3)
             # call self.cave to move from here to the cave if choice is stay
             update_value = self.cave()
-            print(update_value)
-            return update_value
 
         elif choice == "leave":
             print(
                 "You thought you were leaving, but get stuck in an infinite loop of nonsense. Adventure over.")
-            # Do we quit adventure here or send back to start of main??
+            # sends back to next sequence with no key
+            # return self.key
+            return update_value
 
     def cave(self):
         os.system('clear')
@@ -93,14 +93,14 @@ class BrandeRoom:
         if response == "yes":
             print("\nRiddle me this...")
             # call self.play here to move on to riddle
-            return self.play()
+            update_value = self.play()
         elif response == "no":
             print(
-                "You did not accept the challenge, and are now sent down a python hole that leads to the brain of a computer.")
+                "You did not accept the challenge, and are now sent down a python hole that leads to the brain of \na computer.")
             print(
-                "It appears the computer has a virus, or a terminal illness-did you catch that knee slapping joke? Adventure over.")
+                "It appears the computer has a virus, or a terminal illness-did you catch that knee slapping joke? \nAdventure over.")
             # Do we quit here or send back to main to start over??
-            return self.key
+            return update_value
 
     def play(self):
         print("Solve this riddle to move on and make your way to the tea party!\n")
