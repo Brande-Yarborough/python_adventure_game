@@ -40,7 +40,7 @@ class Mirror_Room:
         """)
         print(f"Your eyes open and you find yourself in a dark room. No, room isn't quite the right word...{time.sleep(0.2)}\nFormless void? Yes! A perfectly apt description, a formless void.\nCuriously, your apocryphal alabastrine escort with an eye for fashionable yet functional wristwear seems to be missing.")
         
-        first_choice = input('\nWill you...\n1: Look Around,\n2: Call out\n> ')
+        first_choice = input('\nWill you...\n(1) Look Around\n(2) Call out\n> ')
         if first_choice == '1':
             # time.sleep(0.5)
 
@@ -100,7 +100,7 @@ class Mirror_Room:
                 print("You approach the mirror on the right and run your hand over its surface. The glass is dark and the words don't change. Vexed, you return to your choices.")
                 
             else:
-                print("Invalid")
+                print("Yikes. Apologies, but that's not an option. Let's try that again, I know you can do it champ!")
 
         return update_value
     
@@ -142,7 +142,7 @@ class Mirror_Room:
             return update_value
 
     def look_behind(self):
-        print("You turn back and see a figure with long hair down on the floor, their face covered by dark hair. You consider moving in closer or calling out to them, but the figure suddenly looks up at you, revealing a face with no eyes.")
+        print("You turn and see a figure with long hair down on the floor, their face covered by dark hair. You consider moving in closer or calling out to them, but the figure suddenly looks up at you, revealing a face with no eyes.")
         os.system('clear')
 
         monster_encounter = input("The figure rises, not standing like an ordinary person. It impossibly unfolds itself until it stand, lurching. It's acrid and ancient, it's eyeless gaze fixed upon you. It looms, silent and still.\nYou curse the wheyfaced whistlepig that initiated you on this journey as well as yourself because why'd you even do it?\nThe voice from before fills your mind again, the sudden sound causing you to flinch,\n'Your eyes... Give them to me' the voice whispers, yet it's deafening in your mind.\nDo you:\n(1) Run Away\n(2) Submit\n> ")
@@ -150,8 +150,9 @@ class Mirror_Room:
             string = "You take a few steps backward before turning to run and the figure moves, nimble for its size. It slinks down the hall on all fours as it follows you down corridors and bends. You don't stop, panting as desperation fills you with energy.\nYou keep going, the 'thing' sounding further and further away. You look back and see that it's gone. You almost want to cheer, but the only sound that leaves you is a choked sob.\nYou slow down, stopping to gulp down air. After recovering for a moment, you decide to try to find your way out, take a turn down the next hallway...\n"
             for char in string:
                 print(char, end='', flush=True)
-                time.sleep(.1)
+                time.sleep(.01)
             
+            time.sleep(3)
             os.system('clear')
             time.sleep(3)
             print(r"""
@@ -215,7 +216,7 @@ class Mirror_Room:
             return self.monster_ending()
     
     def monster_ending(self):
-        print("You come-to on your back in complete darkness, returned to the void. You stand up shakily and take a few steps forward before running into a wall. Well, that's new. You try taking a few steps the other way and do the same.\nYou continue to wander aimlessly, praying for a mirror without realizing you never left the corridors. The beast claimed its prize, leaving you blind and unaware in this maze.\n\n")
+        print("You come-to on your back in complete darkness, returned to the void. You stand up shakily and take a few steps forward before running into a wall. Well, that's new. You try taking a few steps the other way and do the same.\nYou continue to wander aimlessly, praying for a mirror without realizing you never left the corridors. The beast claimed its prize, leaving you blind and terrified in this maze.\n\n")
         continue_prompt = input("Though you were met with a tragic end, this doesn't have to be the end of this story:\n(1) To go back to your mirror choice\n(2) To go back to the room selections\n> ")
         if continue_prompt == '1':
             self.choose_mirror()
@@ -223,12 +224,13 @@ class Mirror_Room:
             return self.key
     
     def first_beckon(self):
-        update_value = self.second_beckon()
-        return update_value
-    
-    def second_beckon(self):
-        update_value =  self.courage_ending()
-        return update_value
+        print("You shrug and move on, wondering how to get out. You make your way, headstrong and taking turns on a whim. Somehow, the way you're going just feels 'right'.\nAs you're walking, you pass an intersection and hear a woman's cry down a hall.")
+        second_courage_choice = input("Do you:\n(1) Go check it out\n(2) I've gotta be close to the exit, I can feel it!\n> ")
+        if second_courage_choice == '1':
+            return self.look_behind()
+        elif second_courage_choice == '2':
+            update_value =  self.courage_ending()
+            return update_value
 
 
     def courage_ending(self):
@@ -262,33 +264,62 @@ class Mirror_Room:
         
         """)
 
-        print("""You get close to the end, the 'something' on your heels, you can feel/smell its breath/fragrance on the back of your neck. As you step through the doorway, you feel its fingers/tongue wrap around your ankle.\n... You turn back to see nothing but a wall. The doorway is gone. You take inventory of the room you're in now. It's like a plain box, the walls white and marble-like. You look up and cen't see the top, but there's light trickling in from somewhere and shining down to the center of the room.\nBathing in that light is a stone pedestal of a python. Its hood is spread and it looks poised for a strike. In its mouth, you see a crimson crystalline apple.""")
+        print("You get close to the end, the 'something' on your heels, you can feel/smell its breath/fragrance on the back of your neck. As you step through the doorway, you feel its fingers/tongue wrap around your ankle.\n... You turn back to see nothing but a wall. The doorway is gone. You take inventory of the room you're in now. It's like a plain box, the walls white and marble-like. You look up and cen't see the top, but there's light trickling in from somewhere and shining down to the center of the room.\nBathing in that light is a stone pedestal of a python. Its hood is spread and it looks poised for a strike. In its mouth, you see a crimson crystalline apple.")
         update_value =  self.room_end()
         return update_value
 
     def wisdom(self):
-        riddle = print('"I am one and part of a pair. My front and back are mirrors. If you remove them I have to question why."')
+        print("The message is a riddle:\n")
+        
+        print(f'"I am one and part of a pair.{time.sleep(.5)}\nMy front and back are mirrors.{time.sleep(.5)}\nIf you remove me I have to question why.{time.sleep(.5)}\nWhat am I?"')
         player_answer = input("Type in your guess here:\n> ").lower()
-        correct_answer = ['eye', 'eyes']
-        riddle_turns = 0
+        correct_answers = ['eye', 'eyes']
+        correct_answer = ['eye']
+        riddle_turns = 3
+        word_blanks = '_' * len(correct_answer)
 
-        while riddle_turns < 3:
-            if player_answer in correct_answer:
+        print(word_blanks)
+
+        while riddle_turns < 5:
+            print(f"You have {riddle_turns} turns left\n")
+            if player_answer in correct_answers:
                 print("Correct!")
-                self.riddle_solved()
+                update_value = self.riddle_two()
+            elif riddle_turns > 2:
+                print("The text changes:\n'I see you're having some trouble here, try again.'")
+                riddle_turns += 1
             else:
-                print("Incorrect")
+                print("The text changes:\n'Incorrect, try again.")
                 riddle_turns += 1
         
-        update_value = self.wisdom_ending()
-        return update_value
+        if riddle_turns == 5:
+            return self.wisdom_bad_ending()
+        else:
+            return update_value
     
     def riddle_two(self):
-        update_value = self.wisdom_ending()
+        print('The words vanish before the quote reappears, this time the end is different:\n"I am one and part of a pair. My front and back are mirrors. If you remove me I have to question why. The path through can only be taken without me."')
+        players_wisdom_choice = input("Will you:\n(1) Run head-first into the mirror\n(2) Close your eyes\n(3) Jab your eyes like a lunatic")
+        if players_wisdom_choice == '1':
+            print("You take a few steps back and brace yourself before sprinting, your intent to smash the glass into smithereens. The mirror is an unmovable object however, and you're sent flying back. You sit up, dazed and the mirror fades.\nYou scramble to your feet in complete darkness and begin to meander. You wander aimless through the void until the darkness begins to feel like an embrace. From time to time you think about the white groundhog. You eventually descend and accept your mania, a smile perpetually on your face.\nYou quite love it in here.")
+            return self.wisdom_bad_ending()
+        elif players_wisdom_choice == '2':
+            print('Understanding the riddle, you close your eyes and take a step into the mirror. Meeting no resistance as you do.')
+            update_value = self.wisdom_ending()
+        elif players_wisdom_choice == '2':
+            print(f'Sure of yourself, you jab your thumbs into your eyes.{time.sleep(0.5)}\nThe pain in excruciating.{time.sleep(0.5)}\nYou try to step with your hands covering your throbbing corneas before you trip and fall towards the mirror. You brace yourself for the sound of shattering before hearing a disembodied voice:\n"Erm... I guess that counts!"\nThe voice sounds a bit familiar, but before you can process it you fall through the mirror and writhe on the ground in pain.\nYou pitiful thing.\nAfter your eyes (and ego) recover, you stand back up to get your bearings.\n')
+            update_value = self.wisdom_ending()
         return update_value
 
-        
+    def wisdom_bad_ending(self):
+        continue_prompt = input("Though you were met with a bittersweet end, this doesn't have to be the end of this story:\n(1) To go back to right after you solved the riddle\n(2) To go back to the room selections\n> ")
+        if continue_prompt == '1':
+            self.riddle_two()
+        elif continue_prompt == '2':
+            return self.key
+
     def wisdom_ending(self):
+        print("You find yourself in forest clearing with a solitary tree standing vigil in the middle. It's quiet, the sunlight pouring in a gentle heat before a refreshing breeze comes to wipe it away. The leaves ")
         update_value = self.room_end()
         return update_value
 

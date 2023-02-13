@@ -16,7 +16,9 @@ class Main:
         self.key = result
 
     def main_play(self):
-        conors_room.ConorRoom(self.key).play()
+        result = conors_room.ConorRoom(self.key).play()
+        self.key = result
+        
 
     def mirror_room(self):
         result = josiahs_room.Mirror_Room(self.key).enter()
@@ -188,7 +190,7 @@ game.start_adventure()
 
 
 while game.key < 4:
-    print(game.key)
+    print(f'Current keys = {game.key}')
     game.next_sequence()
 
 if game.key >= 4:
