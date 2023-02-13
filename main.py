@@ -14,13 +14,16 @@ class Main:
     def heartkingdom_room(self):
         result = ambers_room.Hearts_Room(self.key).play()
         self.key = result
+        
 
     def main_play(self):
-        result = conors_room.ConorRoom(self.key).play()
-        self.key = result
+        conors_room.ConorRoom(self.key).play()
+        
 
     def mirror_room(self):
-        josiahs_room.Mirror_Room(self.key).enter()
+        result = josiahs_room.Mirror_Room(self.key).enter()
+        self.key = result
+        
 
     def computer_room(self):
         result = brandes_room.BrandeRoom(self.key).entrance()
@@ -139,11 +142,11 @@ class Main:
           ~"` ~"~~`
 """)
             players_choice = input(
-                'Which adventure would you like to start with:\n(1) The Kingdom of Hearts,\n(2) A Seafaring Journey,\n(3) The Mysterious Mirror, or\n(4) The Cave of Computers?\n>').lower()
+                'Which adventure would you like to start with:\n(1) The Kingdom of Hearts,\n(2) A Seafaring Journey,\n(3) The Mysterious Mirror\n(4) The Cave of Computers?\n> ').lower()
             os.system("clear")
 
             if players_choice == '1':
-                print("You have chosen a journey to the kingdom of hearts. With the help of you Groundhog friend you must evade the queens wrath. Be wary of her tarts of you shall paint the roses red, and possibly lose your head.")
+                print("You have chosen a journey to the kingdom of hearts. With the help of you Groundhog friend you must evade the queens wrath. Be wary of her tarts of you shall pain the roses red, and possible lose your head.")
                 self.heartkingdom_room()
             elif players_choice == '2':
                 self.main_play()
@@ -164,31 +167,33 @@ class Main:
         # print(wow that was weird! Thank goodness you're still here. I am going to keep wandering around.
         # Let's check out another room!
         players_choice = input(
-            'Wow that was weird! Thank goodness you\'re still here.\n\n I am going to keep wandering around.\n\n Feel free to pick another room...\n(1) The Kingdom of Hearts,\n(2) A Seafaring Journey,\n(3) The Mysterious Mirror, or\n(4) The Cave of Computers?\n>')
+            'Wow that was weird! Thank goodness you\'re still here.\n\n I am going to keep wandering around.\n\nFeel free to pick another room...\n(1) The Kingdom of Hearts,\n(2) A Seafaring Journey,\n(3) The Mysterious Mirror,\n(4) The Cave of Computers?\n> ')
         os.system('clear')
         if players_choice == '1':
-            print("You have chosen a journey to the kingdom of hearts. With the help of your Grounhog friend you must evade the queens wrath. Be wary of her tarts of you shall pain the roses red, and possible lose your head.")
+            print("You have chosen a journey to the kingdom of hearts. With the help of your Groundhog friend you must evade the queens wrath. Be wary of her tarts of you shall pain the roses red, and possible lose your head.")
             self.heartkingdom_room()
+        
         elif players_choice == '2':
             self.main_play()
 
         elif players_choice == '3':
-            print("\nA mirror appears before you and you approach it. You reach out to touch it and when your hand touches the one of your reflection, fall through the veneer.")
+            print("\nA mirror appears before you and you approach it. You notice that its surface is rippling. You stretch out your hand and when your finger touches your reflection's, you fall through the veneer.")
             self.mirror_room()
+            
+            
 
         elif players_choice == '4':
             self.computer_room()
 
 
 # This initializes the key to a value of zero.
-
 game = Main(0)
 
 game.start_adventure()
 
 
 while game.key < 4:
-    print(f'Current keys = {game.key}')
+    print(game.key)
     game.next_sequence()
 
 if game.key >= 4:
@@ -211,61 +216,3 @@ if game.key >= 4:
           """)
     quit()
 
-
-#
-# else:
-# print('The groundhog and Mad Hatter are sad you did not join them :( ')
-
-#
-#
-# items = 0
-# class Room():
-#     def __init__(self):
-#         pass
-#     def item_received():
-#         items += 1
-
-#     def to_start():
-#         first_room()
-
-# name = input('Enter your name: ')
-
-# class Main(Room):
-#     __init__(self)
-#     options = [1, 2, 3, 4]
-
-#     pass
-
-# main = Main()
-
-# input(f'Your choices are{options}')
-
-# print(f'Hello, {name}! Welcome to your adventure!')
-
-# put story about following groundhog here?
-
-# items = 0
-# class Room():
-#     def __init__(self):
-#         pass
-#     def item_received():
-#         items += 1
-
-#     def to_start():
-#         first_room()
-
-# name = input('Enter your name: ')
-
-# class Main(Room):
-#     __init__(self)
-#     options = [1, 2, 3, 4]
-
-#     pass
-
-# main = Main()
-
-# input(f'Your choices are{options}')
-
-# print(f'Hello, {name}! Welcome to your adventure!')
-
-# put story about following groundhog here?
