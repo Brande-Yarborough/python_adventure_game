@@ -78,11 +78,11 @@ class BrandeRoom:
                        |   |.  `.  :
                        ;   |.    `. 
                        """)
-        time.sleep(1)
+        time.sleep(2)
         print("Now that you are here, you must also finish your pixel perfect project in addition to solving \n the riddle.\n")
-        time.sleep(1)
+        time.sleep(2)
         print("Mady Hatter knows you can do it, but you are doubting yourself.\n")
-        time.sleep(1)
+        time.sleep(2)
         print("It feels like you are in a dream, where there are lines of code, but when you wake up, your screen is \n totally blank.\n")
         time.sleep(1)
         print("Mady Hatter asks what you got, and helps you persist through the project.\n")
@@ -153,5 +153,4 @@ class BrandeRoom:
                     return update_value
 
             print("Stumped you. Adventure over.")
-    # Do we quit or go back to main here??
             return self.key

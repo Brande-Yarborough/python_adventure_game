@@ -14,16 +14,13 @@ class Main:
     def heartkingdom_room(self):
         result = ambers_room.Hearts_Room(self.key).play()
         self.key = result
-        
 
     def main_play(self):
         conors_room.ConorRoom(self.key).play()
-        
 
     def mirror_room(self):
         result = josiahs_room.Mirror_Room(self.key).enter()
         self.key = result
-        
 
     def computer_room(self):
         result = brandes_room.BrandeRoom(self.key).entrance()
@@ -172,15 +169,13 @@ class Main:
         if players_choice == '1':
             print("You have chosen a journey to the kingdom of hearts. With the help of your Groundhog friend you must evade the queens wrath. Be wary of her tarts of you shall pain the roses red, and possible lose your head.")
             self.heartkingdom_room()
-        
+
         elif players_choice == '2':
             self.main_play()
 
         elif players_choice == '3':
             print("\nA mirror appears before you and you approach it. You notice that its surface is rippling. You stretch out your hand and when your finger touches your reflection's, you fall through the veneer.")
             self.mirror_room()
-            
-            
 
         elif players_choice == '4':
             self.computer_room()
@@ -215,4 +210,3 @@ if game.key >= 4:
           ``-------''
           """)
     quit()
-
