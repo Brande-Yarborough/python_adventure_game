@@ -23,6 +23,7 @@ class Main:
     def mirror_room(self):
         result = josiahs_room.Mirror_Room(self.key).enter()
         self.key = result
+        print(self.key)
 
     def computer_room(self):
         result = brandes_room.BrandeRoom(self.key).entrance()
