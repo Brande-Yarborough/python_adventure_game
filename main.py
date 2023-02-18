@@ -145,7 +145,7 @@ class Main:
             os.system("clear")
 
             if players_choice == '1':
-                print("You have chosen a journey to the kingdom of hearts. With the help of you Groundhog friend you must evade the queens wrath. Be wary of her tarts of you shall pain the roses red, and possible lose your head.")
+                print("You have chosen a journey to the kingdom of hearts. With the help of your Groundhog friend you must evade the queens wrath. Be wary of her tarts of you shall paint the roses red, and possibly lose your head.")
                 self.heartkingdom_room()
             elif players_choice == '2':
                 self.main_play()
