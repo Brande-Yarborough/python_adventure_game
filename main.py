@@ -18,7 +18,6 @@ class Main:
     def main_play(self):
         result = conors_room.ConorRoom(self.key).play()
         self.key = result
-        
 
     def mirror_room(self):
         result = josiahs_room.Mirror_Room(self.key).enter()
