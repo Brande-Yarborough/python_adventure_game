@@ -329,7 +329,8 @@ class Mirror_Room:
         print("You scramble to your feet and begin to meander through the darkness. You wander aimless through the void until the darkness begins to feel like an embrace. From time to time you think about the white groundhog. You eventually descend and accept your mania, a smile perpetually on your face.\nYou quite love it here.")
         continue_prompt = input("\nThough you were met with a bittersweet end, this doesn't have to be the end of this story:\n(1) To go back to right before you solved the riddle\n(2) To go back to the room selections\n> ")
         if continue_prompt == '1':
-            self.wisdom()
+            update_value = self.wisdom()
+            return update_value
         elif continue_prompt == '2':
             return self.key
 
